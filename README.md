@@ -1,3 +1,3 @@
-# dna2vec: Consistent vector representations of variable-length k-mers
+# dna2vec
 
-https://arxiv.org/abs/1701.06279
+Paper available at: <https://arxiv.org/abs/1701.06279>

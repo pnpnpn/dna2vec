@@ -1,3 +1,3 @@
 # dna2vec
 
-Paper available at: <https://arxiv.org/abs/1701.06279>
+<https://arxiv.org/abs/1701.06279>

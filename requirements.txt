@@ -1,0 +1,13 @@
+arrow==0.8.0
+biopython==1.68
+boto==2.46.1
+bz2file==0.98
+gensim==0.13.2
+Logbook==1.0.0
+numpy==1.11.1
+pep8==1.7.0
+python-dateutil==2.6.0
+requests==2.13.0
+scipy==0.19.0
+six==1.10.0
+smart-open==1.5.1

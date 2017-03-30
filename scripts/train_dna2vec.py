@@ -67,13 +67,7 @@ def run_main(args, out_fileroot):
 
     benchmark = Benchmark()
 
-    if args.kmer_fragmenter == 'disjoint':
-        kmer_fragmenter = DisjointKmerFragmenter(args.k_low, args.k_high)
-    elif args.kmer_fragmenter == 'sliding':
-        kmer_fragmenter = SlidingKmerFragmenter(args.k_low, args.k_high)
-    else:
-        raise InvalidArgException('Invalid kmer fragmenter: {}'.format(args.kmer_fragmenter))
-
+    kmer_fragmenter = SlidingKmerFragmenter(args.k_low, args.k_high)
     logbook.info('kmer fragmenter: {}'.format(args.kmer_fragmenter))
 
     histogram = Histogram()
@@ -96,7 +90,7 @@ def run_main(args, out_fileroot):
 
 def main():
     argp = argparse.ArgumentParser()
-    argp.add_argument('--kmer-fragmenter', help='disjoint or sliding', choices=['disjoint', 'sliding'], default='sliding')
+    argp.add_argument('--kmer-fragmenter', help='sliding', choices=['sliding'], default='sliding')
     argp.add_argument('--vec-dim', help='vector dimension', type=int, default=12)
     argp.add_argument('--rseed', help='general np.random seed', type=int, default=7)
     argp.add_argument('--rseed-trainset', help='random seed for generating training data', type=int, default=123)

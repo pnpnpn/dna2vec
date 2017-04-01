@@ -18,10 +18,6 @@ from dna2vec.generators import DisjointKmerFragmenter, SlidingKmerFragmenter
 
 from gensim.models import word2vec
 
-"""
-./scripts/train_dna2vec.py --inputs ../dataset/genomes2016/hg38/*.fa
-"""
-
 class InvalidArgException(Exception):
     pass
 
@@ -107,8 +103,9 @@ def main():
     argp.add_argument('--k-low', help='k-mer start range (inclusive)', type=int, default=5)
     argp.add_argument('--k-high', help='k-mer end range (inclusive)', type=int, default=5)
     argp.add_argument('--context', help='half size of context window (the total size is 2*c+1)', type=int, default=4)
-    argp.add_argument('--epochs', help='', type=int, default=1)
+    argp.add_argument('--epochs', help='number of epochs', type=int, default=1)
     argp.add_argument('--gensim-iters', help="gensim's internal iterations", type=int, default=1)
+    argp.add_argument('--out-dir', help="output directory", default='../dataset/dna2vec/results')
     argp.add_argument('--debug', help='', action='store_true')
     args = argp.parse_args()
 
@@ -116,7 +113,7 @@ def main():
         out_dir = '/tmp'
         log_level = 'DEBUG'
     else:
-        out_dir = '../dataset/dna2vec/results'
+        out_dir = args.out_dir
         log_level = 'INFO'
 
     inputs = []

@@ -20,9 +20,10 @@ Training dna2vec embeddings
 
 1. Download `hg38` from <http://hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.chromFa.tar.gz>.
     This will take a while as it's 938MB.
-2. Untar with `tar -zxvf hg38.chromFa.tar.gz`. You should see at least 22
-    FASTA files `chr1.fa`, `chr2.fa`, ..., `chr22.fa`.
-
+2. Untar with `tar -zxvf hg38.chromFa.tar.gz`. You should see FASTA files for
+    chromosome 1 to 22: `chr1.fa`, `chr2.fa`, ..., `chr22.fa`.
+3. Move the 22 FASTA files to folder `inputs/hg38/`
+4. Start the training with: `python3 ./scripts/train_dna2vec.py -c configs/hg38-20161219-0153.yml`
 
 Reading pretrained dna2vec
 ---

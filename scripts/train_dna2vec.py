@@ -3,9 +3,10 @@
 import sys
 sys.path.append('../')
 
+import glob
 import logbook
 from logbook.compat import redirect_logging
-import argparse
+import configargparse
 import numpy as np
 from Bio import SeqIO
 from attic_util.time_benchmark import Benchmark
@@ -13,7 +14,7 @@ from attic_util import util
 from attic_util.tee import Tee
 from dna2vec.histogram import Histogram
 from dna2vec.generators import SeqGenerator, KmerSeqIterable, SeqMapper, SeqFragmenter
-from dna2vec.generators import SlidingKmerFragmenter
+from dna2vec.generators import DisjointKmerFragmenter, SlidingKmerFragmenter
 
 from gensim.models import word2vec
 
@@ -57,7 +58,7 @@ class Learner:
         out_filename = '{}.w2v'.format(self.out_fileroot)
         self.model.save_word2vec_format(out_filename, binary=False)
 
-def run_main(args, out_fileroot):
+def run_main(args, inputs, out_fileroot):
     logbook.info(' '.join(sys.argv))
     if not args.debug:
         import logging
@@ -67,13 +68,19 @@ def run_main(args, out_fileroot):
 
     benchmark = Benchmark()
 
-    kmer_fragmenter = SlidingKmerFragmenter(args.k_low, args.k_high)
+    if args.kmer_fragmenter == 'disjoint':
+        kmer_fragmenter = DisjointKmerFragmenter(args.k_low, args.k_high)
+    elif args.kmer_fragmenter == 'sliding':
+        kmer_fragmenter = SlidingKmerFragmenter(args.k_low, args.k_high)
+    else:
+        raise InvalidArgException('Invalid kmer fragmenter: {}'.format(args.kmer_fragmenter))
+
     logbook.info('kmer fragmenter: {}'.format(args.kmer_fragmenter))
 
     histogram = Histogram()
     kmer_seq_iterable = KmerSeqIterable(
         args.rseed_trainset,
-        SeqGenerator(args.inputs, args.epochs),
+        SeqGenerator(inputs, args.epochs),
         SeqMapper(),
         SeqFragmenter(),
         kmer_fragmenter,
@@ -89,8 +96,10 @@ def run_main(args, out_fileroot):
     benchmark.print_time()
 
 def main():
-    argp = argparse.ArgumentParser()
-    argp.add_argument('--kmer-fragmenter', help='sliding', choices=['sliding'], default='sliding')
+    #argp = argparse.ArgumentParser()
+    argp = configargparse.get_argument_parser()
+    argp.add('-c', is_config_file=True, help='config file path')
+    argp.add_argument('--kmer-fragmenter', help='disjoint or sliding', choices=['disjoint', 'sliding'], default='sliding')
     argp.add_argument('--vec-dim', help='vector dimension', type=int, default=12)
     argp.add_argument('--rseed', help='general np.random seed', type=int, default=7)
     argp.add_argument('--rseed-trainset', help='random seed for generating training data', type=int, default=123)
@@ -110,7 +119,11 @@ def main():
         out_dir = '../dataset/dna2vec/results'
         log_level = 'INFO'
 
-    mbytes = util.estimate_bytes(args.inputs) // (10 ** 6)
+    inputs = []
+    for s in args.inputs:
+        inputs.extend(list(glob.glob(s)))
+
+    mbytes = util.estimate_bytes(inputs) // (10 ** 6)
     out_fileroot = util.get_output_fileroot(
         out_dir,
         'dna2vec',
@@ -127,7 +140,7 @@ def main():
         with Tee(summary_fptr):
             logbook.StreamHandler(sys.stdout, level=log_level).push_application()
             redirect_logging()
-            run_main(args, out_fileroot)
+            run_main(args, inputs, out_fileroot)
 
 if __name__ == '__main__':
     main()

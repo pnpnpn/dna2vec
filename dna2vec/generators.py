@@ -29,6 +29,34 @@ class SlidingKmerFragmenter:
     def apply(self, rng, seq):
         return [seq[i: i + rng.randint(self.k_low, self.k_high + 1)] for i in range(len(seq) - self.k_high + 1)]
 
+class DisjointKmerFragmenter:
+    """
+    Split a sequence into kmers
+    """
+    def __init__(self, k_low, k_high):
+        self.k_low = k_low
+        self.k_high = k_high
+
+    @staticmethod
+    def random_chunks(rng, li, min_chunk, max_chunk):
+        """
+        Both min_chunk and max_chunk are inclusive
+        """
+        it = iter(li)
+        while True:
+            head_it = islice(it, rng.randint(min_chunk, max_chunk + 1))
+            nxt = '' . join(head_it)
+
+            # throw out chunks that are not within the kmer range
+            if len(nxt) >= min_chunk:
+                yield nxt
+            else:
+                break
+
+    def apply(self, rng, seq):
+        seq = seq[rng.randint(self.k_low):]  # randomly offset the beginning to create more variations
+        return list(DisjointKmerFragmenter.random_chunks(rng, seq, self.k_low, self.k_high))
+
 class SeqMapper:
     def __init__(self, use_revcomp=True):
         self.use_revcomp = use_revcomp

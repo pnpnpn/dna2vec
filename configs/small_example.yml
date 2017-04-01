@@ -1,0 +1,4 @@
+inputs: example_inputs/chrUn_KI27075*.fa
+debug: true
+k-low: 3
+k-high: 5

@@ -9,7 +9,7 @@ Installation
 ---
 
 Note that this implementation has only been tested on Python 3.5.3, but we welcome any
-contributions and bug reporting to make it more accessible.
+contributions or bug reporting to make it more accessible.
 
 1. Clone the `dna2vec` repository: `git clone https://github.com/pnpnpn/dna2vec`
 2. Install Python dependencies: `pip3 install -r requirements.txt`
@@ -24,6 +24,8 @@ Training dna2vec embeddings
     chromosome 1 to 22: `chr1.fa`, `chr2.fa`, ..., `chr22.fa`.
 3. Move the 22 FASTA files to folder `inputs/hg38/`
 4. Start the training with: `python3 ./scripts/train_dna2vec.py -c configs/hg38-20161219-0153.yml`
+5. Wait for a couple of days ...
+6. You should see a `*.w2v` and a corresponding `*.txt` file in your `results/` directory.
 
 Reading pretrained dna2vec
 ---

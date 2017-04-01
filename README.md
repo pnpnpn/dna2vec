@@ -30,7 +30,7 @@ Training dna2vec embeddings
 Reading pretrained dna2vec
 ---
 
-You can read pretrained dna2vec vectors within `pretrained/dna2vec-*.w2v` using
+You can read pretrained dna2vec vectors `pretrained/dna2vec-*.w2v` using
 the class `MultiKModel` in `dna2vec/multi_k_model.py`. For example:
 
 ```

@@ -43,7 +43,7 @@ mk_model = MultiKModel(filepath)
 You can fetch the vector representation of `AAA` with:
 ```
 >>> mk_model.vector('AAA')
-array([ 0.023137  ,  0.156295
+array([ 0.023137  ,  0.156295 , ...
 ```
 
 Compute the cosine distance between two k-mers via dna2vec:

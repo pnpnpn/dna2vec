@@ -25,7 +25,7 @@ Training dna2vec embeddings
 3. Move the 22 FASTA files to folder `inputs/hg38/`
 4. Start the training with: `python3 ./scripts/train_dna2vec.py -c configs/hg38-20161219-0153.yml`
 5. Wait for a couple of days ...
-6. You should see a `*.w2v` and a corresponding `*.txt` file in your `results/` directory.
+6. Once the training is done, there should be a `dna2vec-<ID>.w2v` and a corresponding `dna2vec-<ID>.txt` file in your `results/` directory.
 
 Reading pretrained dna2vec
 ---
@@ -38,12 +38,16 @@ from dna2vec.multi_k_model import MultiKModel
 
 filepath = 'pretrained/dna2vec-20161219-0153-k3to8-100d-10c-29320Mbp-sliding-Xat.w2v'
 mk_model = MultiKModel(filepath)
+```
 
-# Vector representation of AAA
+You can fetch the vector representation of `AAA` with:
+```
 >>> mk_model.vector('AAA')
 array([ 0.023137  ,  0.156295
+```
 
-# Cosine distance between two k-mers via dna2vec
+Compute the cosine distance between two k-mers via dna2vec:
+```
 >>> mk_model.cosine_distance('AAA', 'GCT')
 0.14546435594464155
 >>> mk_model.cosine_distance('AAA', 'AAAA')

@@ -38,6 +38,16 @@ from dna2vec.multi_k_model import MultiKModel
 
 filepath = 'pretrained/dna2vec-20161219-0153-k3to8-100d-10c-29320Mbp-sliding-Xat.w2v'
 mk_model = MultiKModel(filepath)
+
+# Vector representation of AAA
+>>> mk_model.vector('AAA')
+array([ 0.023137  ,  0.156295
+
+# Cosine distance between two k-mers via dna2vec
+>>> mk_model.cosine_distance('AAA', 'GCT')
+0.14546435594464155
+>>> mk_model.cosine_distance('AAA', 'AAAA')
+0.89000147450211231
 ```
 
 Contribute

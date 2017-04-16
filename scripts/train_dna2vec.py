@@ -92,7 +92,6 @@ def run_main(args, inputs, out_fileroot):
     benchmark.print_time()
 
 def main():
-    #argp = argparse.ArgumentParser()
     argp = configargparse.get_argument_parser()
     argp.add('-c', is_config_file=True, help='config file path')
     argp.add_argument('--kmer-fragmenter', help='disjoint or sliding', choices=['disjoint', 'sliding'], default='sliding')

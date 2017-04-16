@@ -54,6 +54,19 @@ Compute the cosine distance between two k-mers via dna2vec:
 0.89000147450211231
 ```
 
+FAQ
+---
+### Does the pre-trained dna2vec data (`w2v` file) cover all k-mers?
+
+The pre-trained data should cover all k-mers for *3 &le; k &le; 8*
+
+```python
+>>> [len(mk_model.model(k).vocab) for k in range(3,9)]
+[64, 256, 1024, 4096, 16384, 65536]
+>>> [4**k for k in range(3,9)]
+[64, 256, 1024, 4096, 16384, 65536]
+```
+
 Contribute
 ---
 I would love for you to fork and send me pull request for this project.

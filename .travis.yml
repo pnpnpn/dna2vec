@@ -1,8 +1,6 @@
 language: python
 sudo: false
 python:
-- '2.7'
-- '3.3'
 - '3.4'
 - '3.5'
 - '3.6'
@@ -11,6 +9,3 @@ install:
 script: tox --recreate
 after_success:
 - pep8
-
-#- pip install -r requirements.txt
-#- py.test

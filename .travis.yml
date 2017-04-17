@@ -1,0 +1,12 @@
+language: python
+sudo: false
+python:
+- '3.4'
+- '3.5'
+- '3.6'
+install:
+- pip install tox tox-travis
+script:
+- if [ "$TRAVIS_BRANCH" = "master" ]; then tox --recreate; else tox; fi
+after_success:
+- pep8

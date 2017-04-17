@@ -7,6 +7,6 @@ python:
 install:
 - pip install tox tox-travis
 script:
-- if [ "$TRAVIS_BRANCH" = "master" ]; then tox --recreate; else tox; fi
+- tox --recreate
 after_success:
 - pep8

@@ -1,39 +1,15 @@
-"""Setuptools entry point."""
-import codecs
-import os
-
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
-
-CLASSIFIERS = [
-    'Development Status :: 4 - Beta',
-    'Intended Audience :: Developers',
-    'License :: OSI Approved :: MIT License',
-    'Natural Language :: English',
-    'Operating System :: OS Independent',
-    'Programming Language :: Python',
-    'Topic :: Software Development :: Libraries :: Python Modules'
-]
-
-dirname = os.path.dirname(__file__)
-
-long_description = (
-    codecs.open(os.path.join(dirname, 'README.md'), encoding='utf-8').read()
-)
+from setuptools import setup
+from setuptools import find_packages
 
 setup(
     name='dna2vec',
     version='1.0.0',
-    description='dna2vec',
-    long_description=long_description,
+    description='dna2vec: Consistent vector representations of variable-length k-mers',
     author='Patrick Ng',
     author_email='pn.appdev@gmail.com',
     url='https://github.com/pnpnpn/dna2vec',
-    packages=['dna2vec'],
+    license='MIT',
     install_requires=[
         'gensim>=0.13,<1.0'
     ],
-    classifiers=CLASSIFIERS)
+    packages=find_packages())

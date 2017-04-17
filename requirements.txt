@@ -16,4 +16,5 @@ scipy==0.19.0
 six==1.10.0
 smart-open==1.5.1
 tox==2.7.0
+tox-pyenv==1.0.3
 virtualenv==15.1.0

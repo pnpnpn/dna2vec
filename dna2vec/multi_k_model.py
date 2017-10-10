@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import logbook
 import tempfile
 import numpy as np

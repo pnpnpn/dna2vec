@@ -10,6 +10,7 @@ setup(
     url='https://github.com/pnpnpn/dna2vec',
     license='MIT',
     install_requires=[
-        'gensim>=0.13,<1.0'
+        'gensim>=0.13,<1.0',
+        'logbook',
     ],
     packages=find_packages())

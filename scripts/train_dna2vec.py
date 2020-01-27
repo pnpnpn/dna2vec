@@ -52,7 +52,7 @@ class Learner:
 
     def write_vec(self):
         out_filename = '{}.w2v'.format(self.out_fileroot)
-        self.model.save_word2vec_format(out_filename, binary=False)
+        self.model.wv.save_word2vec_format(out_filename, binary=False)
 
 def run_main(args, inputs, out_fileroot):
     logbook.info(' '.join(sys.argv))

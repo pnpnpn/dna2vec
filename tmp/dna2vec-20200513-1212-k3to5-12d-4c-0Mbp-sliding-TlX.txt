@@ -1,0 +1,789 @@
+[2020-05-13 12:12:33.663938] INFO: Generic: ./scripts/train_dna2vec.py -c configs/small_example.yml
+[2020-05-13 12:12:33.663938] INFO: Generic: kmer fragmenter: sliding
+[2020-05-13 12:12:33.664936] INFO: SeqGenerator: Number of epochs: 1
+[2020-05-13 12:12:33.664936] INFO: Learner: word2vec.FAST_VERSION (should be >= 0): 1
+[2020-05-13 12:12:33.664936] INFO: Learner: Context window half size: 4
+[2020-05-13 12:12:33.664936] INFO: Learner: Use skipgram: 1
+[2020-05-13 12:12:33.664936] INFO: Learner: gensim_iters: 1
+[2020-05-13 12:12:33.664936] INFO: Learner: vec_dim: 12
+[2020-05-13 12:12:33.665933] INFO: gensim.models.word2vec: collecting all words and their counts
+[2020-05-13 12:12:33.674911] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270750v1.fa
+[2020-05-13 12:12:33.674911] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:33.674911] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:33.686877] INFO: SeqGenerator: Whole fasta seqlen: 148850
+[2020-05-13 12:12:33.690867] DEBUG: SeqGenerator: input seq len: 3846
+[2020-05-13 12:12:33.691864] DEBUG: KmerSeqIterable: Splits of len=3846 to: [3846]
+[2020-05-13 12:12:33.715800] INFO: gensim.models.word2vec: PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+[2020-05-13 12:12:33.717795] DEBUG: SeqGenerator: input seq len: 4594
+[2020-05-13 12:12:33.717795] DEBUG: KmerSeqIterable: Splits of len=4594 to: [4594]
+[2020-05-13 12:12:33.747714] DEBUG: SeqGenerator: input seq len: 4394
+[2020-05-13 12:12:33.748712] DEBUG: KmerSeqIterable: Splits of len=4394 to: [4394]
+[2020-05-13 12:12:33.786610] DEBUG: SeqGenerator: input seq len: 4886
+[2020-05-13 12:12:33.786610] DEBUG: KmerSeqIterable: Splits of len=4886 to: [4886]
+[2020-05-13 12:12:33.822515] DEBUG: SeqGenerator: input seq len: 2843
+[2020-05-13 12:12:33.822515] DEBUG: KmerSeqIterable: Splits of len=2843 to: [2843]
+[2020-05-13 12:12:33.847954] DEBUG: SeqGenerator: input seq len: 3011
+[2020-05-13 12:12:33.849949] DEBUG: KmerSeqIterable: Splits of len=3011 to: [3011]
+[2020-05-13 12:12:33.871890] DEBUG: SeqGenerator: input seq len: 4317
+[2020-05-13 12:12:33.875880] DEBUG: KmerSeqIterable: Splits of len=4317 to: [4317]
+[2020-05-13 12:12:33.912781] DEBUG: SeqGenerator: input seq len: 2544
+[2020-05-13 12:12:33.914776] DEBUG: KmerSeqIterable: Splits of len=2544 to: [2544]
+[2020-05-13 12:12:33.930732] DEBUG: SeqGenerator: input seq len: 2626
+[2020-05-13 12:12:33.931730] DEBUG: KmerSeqIterable: Splits of len=2626 to: [2626]
+[2020-05-13 12:12:33.951677] DEBUG: SeqGenerator: input seq len: 3945
+[2020-05-13 12:12:33.951677] DEBUG: KmerSeqIterable: Splits of len=3945 to: [3945]
+[2020-05-13 12:12:33.987580] DEBUG: SeqGenerator: input seq len: 2886
+[2020-05-13 12:12:33.989576] DEBUG: KmerSeqIterable: Splits of len=2886 to: [2886]
+[2020-05-13 12:12:34.016504] DEBUG: SeqGenerator: input seq len: 4720
+[2020-05-13 12:12:34.022488] DEBUG: KmerSeqIterable: Splits of len=4720 to: [4720]
+[2020-05-13 12:12:34.066370] DEBUG: SeqGenerator: input seq len: 3778
+[2020-05-13 12:12:34.066370] DEBUG: KmerSeqIterable: Splits of len=3778 to: [3778]
+[2020-05-13 12:12:34.101277] DEBUG: SeqGenerator: input seq len: 3304
+[2020-05-13 12:12:34.106264] DEBUG: KmerSeqIterable: Splits of len=3304 to: [3304]
+[2020-05-13 12:12:34.131197] DEBUG: SeqGenerator: input seq len: 3247
+[2020-05-13 12:12:34.136184] DEBUG: KmerSeqIterable: Splits of len=3247 to: [3247]
+[2020-05-13 12:12:34.165105] DEBUG: SeqGenerator: input seq len: 2958
+[2020-05-13 12:12:34.174082] DEBUG: KmerSeqIterable: Splits of len=2958 to: [2958]
+[2020-05-13 12:12:34.193030] DEBUG: SeqGenerator: input seq len: 2639
+[2020-05-13 12:12:34.204002] DEBUG: KmerSeqIterable: Splits of len=2639 to: [2639]
+[2020-05-13 12:12:34.220956] DEBUG: SeqGenerator: input seq len: 3289
+[2020-05-13 12:12:34.221953] DEBUG: KmerSeqIterable: Splits of len=3289 to: [3289]
+[2020-05-13 12:12:34.240902] DEBUG: SeqGenerator: input seq len: 4135
+[2020-05-13 12:12:34.248882] DEBUG: KmerSeqIterable: Splits of len=4135 to: [4135]
+[2020-05-13 12:12:34.273814] DEBUG: SeqGenerator: input seq len: 4947
+[2020-05-13 12:12:34.278802] DEBUG: KmerSeqIterable: Splits of len=4947 to: [4947]
+[2020-05-13 12:12:34.310716] DEBUG: SeqGenerator: input seq len: 4999
+[2020-05-13 12:12:34.310716] DEBUG: KmerSeqIterable: Splits of len=4999 to: [4999]
+[2020-05-13 12:12:34.340636] DEBUG: SeqGenerator: input seq len: 3664
+[2020-05-13 12:12:34.341633] DEBUG: KmerSeqIterable: Splits of len=3664 to: [3664]
+[2020-05-13 12:12:34.363575] DEBUG: SeqGenerator: input seq len: 3124
+[2020-05-13 12:12:34.368562] DEBUG: KmerSeqIterable: Splits of len=3124 to: [3124]
+[2020-05-13 12:12:34.387510] DEBUG: SeqGenerator: input seq len: 4945
+[2020-05-13 12:12:34.396487] DEBUG: KmerSeqIterable: Splits of len=4945 to: [4945]
+[2020-05-13 12:12:34.428402] DEBUG: SeqGenerator: input seq len: 4217
+[2020-05-13 12:12:34.428402] DEBUG: KmerSeqIterable: Splits of len=4217 to: [4217]
+[2020-05-13 12:12:34.454838] DEBUG: SeqGenerator: input seq len: 3608
+[2020-05-13 12:12:34.459825] DEBUG: KmerSeqIterable: Splits of len=3608 to: [3608]
+[2020-05-13 12:12:34.481766] DEBUG: SeqGenerator: input seq len: 3106
+[2020-05-13 12:12:34.486753] DEBUG: KmerSeqIterable: Splits of len=3106 to: [3106]
+[2020-05-13 12:12:34.505702] DEBUG: SeqGenerator: input seq len: 2947
+[2020-05-13 12:12:34.514679] DEBUG: KmerSeqIterable: Splits of len=2947 to: [2947]
+[2020-05-13 12:12:34.533143] DEBUG: SeqGenerator: input seq len: 3104
+[2020-05-13 12:12:34.542111] DEBUG: KmerSeqIterable: Splits of len=3104 to: [3104]
+[2020-05-13 12:12:34.560062] DEBUG: SeqGenerator: input seq len: 3225
+[2020-05-13 12:12:34.561060] DEBUG: KmerSeqIterable: Splits of len=3225 to: [3225]
+[2020-05-13 12:12:34.587988] DEBUG: SeqGenerator: input seq len: 3532
+[2020-05-13 12:12:34.588986] DEBUG: KmerSeqIterable: Splits of len=3532 to: [3532]
+[2020-05-13 12:12:34.609930] DEBUG: SeqGenerator: input seq len: 3161
+[2020-05-13 12:12:34.617909] DEBUG: KmerSeqIterable: Splits of len=3161 to: [3161]
+[2020-05-13 12:12:34.638852] DEBUG: SeqGenerator: input seq len: 2523
+[2020-05-13 12:12:34.646831] DEBUG: KmerSeqIterable: Splits of len=2523 to: [2523]
+[2020-05-13 12:12:34.663785] DEBUG: SeqGenerator: input seq len: 3333
+[2020-05-13 12:12:34.663785] DEBUG: KmerSeqIterable: Splits of len=3333 to: [3333]
+[2020-05-13 12:12:34.683732] DEBUG: SeqGenerator: input seq len: 3360
+[2020-05-13 12:12:34.687722] DEBUG: KmerSeqIterable: Splits of len=3360 to: [3360]
+[2020-05-13 12:12:34.708665] DEBUG: SeqGenerator: input seq len: 4883
+[2020-05-13 12:12:34.715647] DEBUG: KmerSeqIterable: Splits of len=4883 to: [4883]
+[2020-05-13 12:12:34.745566] DEBUG: SeqGenerator: input seq len: 2887
+[2020-05-13 12:12:34.745566] DEBUG: KmerSeqIterable: Splits of len=2887 to: [2887]
+[2020-05-13 12:12:34.763519] DEBUG: SeqGenerator: input seq len: 3006
+[2020-05-13 12:12:34.771498] DEBUG: KmerSeqIterable: Splits of len=3006 to: [3006]
+[2020-05-13 12:12:34.789449] DEBUG: SeqGenerator: input seq len: 2885
+[2020-05-13 12:12:34.798426] DEBUG: KmerSeqIterable: Splits of len=2885 to: [2885]
+[2020-05-13 12:12:34.815380] DEBUG: SeqGenerator: input seq len: 3475
+[2020-05-13 12:12:34.816377] DEBUG: KmerSeqIterable: Splits of len=3475 to: [3475]
+[2020-05-13 12:12:34.838318] DEBUG: SeqGenerator: input seq len: 2706
+[2020-05-13 12:12:34.841311] DEBUG: KmerSeqIterable: Splits of len=2706 to: [2706]
+[2020-05-13 12:12:34.860260] DEBUG: SeqGenerator: input seq len: 3251
+[2020-05-13 12:12:34.868239] DEBUG: KmerSeqIterable: Splits of len=3251 to: [3251]
+[2020-05-13 12:12:34.901151] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270751v1.fa
+[2020-05-13 12:12:34.904144] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:34.905142] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:34.906138] INFO: SeqGenerator: Whole fasta seqlen: 150742
+[2020-05-13 12:12:34.907135] DEBUG: SeqGenerator: input seq len: 3331
+[2020-05-13 12:12:34.907135] DEBUG: KmerSeqIterable: Splits of len=3331 to: [3331]
+[2020-05-13 12:12:34.939049] DEBUG: SeqGenerator: input seq len: 3916
+[2020-05-13 12:12:34.939049] DEBUG: KmerSeqIterable: Splits of len=3916 to: [3916]
+[2020-05-13 12:12:34.977946] DEBUG: SeqGenerator: input seq len: 3699
+[2020-05-13 12:12:34.977946] DEBUG: KmerSeqIterable: Splits of len=3699 to: [3699]
+[2020-05-13 12:12:35.012853] DEBUG: SeqGenerator: input seq len: 2893
+[2020-05-13 12:12:35.013850] DEBUG: KmerSeqIterable: Splits of len=2893 to: [2893]
+[2020-05-13 12:12:35.040778] DEBUG: SeqGenerator: input seq len: 4177
+[2020-05-13 12:12:35.049754] DEBUG: KmerSeqIterable: Splits of len=4177 to: [4177]
+[2020-05-13 12:12:35.074686] DEBUG: SeqGenerator: input seq len: 2639
+[2020-05-13 12:12:35.076682] DEBUG: KmerSeqIterable: Splits of len=2639 to: [2639]
+[2020-05-13 12:12:35.092638] DEBUG: SeqGenerator: input seq len: 3202
+[2020-05-13 12:12:35.092638] DEBUG: KmerSeqIterable: Splits of len=3202 to: [3202]
+[2020-05-13 12:12:35.112585] DEBUG: SeqGenerator: input seq len: 4968
+[2020-05-13 12:12:35.118569] DEBUG: KmerSeqIterable: Splits of len=4968 to: [4968]
+[2020-05-13 12:12:35.149486] DEBUG: SeqGenerator: input seq len: 3065
+[2020-05-13 12:12:35.149486] DEBUG: KmerSeqIterable: Splits of len=3065 to: [3065]
+[2020-05-13 12:12:35.167438] DEBUG: SeqGenerator: input seq len: 4951
+[2020-05-13 12:12:35.168436] DEBUG: KmerSeqIterable: Splits of len=4951 to: [4951]
+[2020-05-13 12:12:35.201348] DEBUG: SeqGenerator: input seq len: 3861
+[2020-05-13 12:12:35.201348] DEBUG: KmerSeqIterable: Splits of len=3861 to: [3861]
+[2020-05-13 12:12:35.226281] DEBUG: SeqGenerator: input seq len: 3439
+[2020-05-13 12:12:35.230270] DEBUG: KmerSeqIterable: Splits of len=3439 to: [3439]
+[2020-05-13 12:12:35.251214] DEBUG: SeqGenerator: input seq len: 4727
+[2020-05-13 12:12:35.257199] DEBUG: KmerSeqIterable: Splits of len=4727 to: [4727]
+[2020-05-13 12:12:35.286121] DEBUG: SeqGenerator: input seq len: 2966
+[2020-05-13 12:12:35.286121] DEBUG: KmerSeqIterable: Splits of len=2966 to: [2966]
+[2020-05-13 12:12:35.304073] DEBUG: SeqGenerator: input seq len: 3578
+[2020-05-13 12:12:35.313050] DEBUG: KmerSeqIterable: Splits of len=3578 to: [3578]
+[2020-05-13 12:12:35.335987] DEBUG: SeqGenerator: input seq len: 4458
+[2020-05-13 12:12:35.344964] DEBUG: KmerSeqIterable: Splits of len=4458 to: [4458]
+[2020-05-13 12:12:35.375881] DEBUG: SeqGenerator: input seq len: 3075
+[2020-05-13 12:12:35.376878] DEBUG: KmerSeqIterable: Splits of len=3075 to: [3075]
+[2020-05-13 12:12:35.396824] DEBUG: SeqGenerator: input seq len: 3088
+[2020-05-13 12:12:35.403807] DEBUG: KmerSeqIterable: Splits of len=3088 to: [3088]
+[2020-05-13 12:12:35.424750] DEBUG: SeqGenerator: input seq len: 4257
+[2020-05-13 12:12:35.432730] DEBUG: KmerSeqIterable: Splits of len=4257 to: [4257]
+[2020-05-13 12:12:35.461651] DEBUG: SeqGenerator: input seq len: 4656
+[2020-05-13 12:12:35.461651] DEBUG: KmerSeqIterable: Splits of len=4656 to: [4656]
+[2020-05-13 12:12:35.496558] DEBUG: SeqGenerator: input seq len: 3321
+[2020-05-13 12:12:35.496558] DEBUG: KmerSeqIterable: Splits of len=3321 to: [3321]
+[2020-05-13 12:12:35.516505] DEBUG: SeqGenerator: input seq len: 2793
+[2020-05-13 12:12:35.522489] DEBUG: KmerSeqIterable: Splits of len=2793 to: [2793]
+[2020-05-13 12:12:35.540441] DEBUG: SeqGenerator: input seq len: 4583
+[2020-05-13 12:12:35.548420] DEBUG: KmerSeqIterable: Splits of len=4583 to: [4583]
+[2020-05-13 12:12:35.578340] DEBUG: SeqGenerator: input seq len: 4689
+[2020-05-13 12:12:35.578340] DEBUG: KmerSeqIterable: Splits of len=4689 to: [4689]
+[2020-05-13 12:12:35.611251] DEBUG: SeqGenerator: input seq len: 3073
+[2020-05-13 12:12:35.612249] DEBUG: KmerSeqIterable: Splits of len=3073 to: [3073]
+[2020-05-13 12:12:35.633192] DEBUG: SeqGenerator: input seq len: 2860
+[2020-05-13 12:12:35.640174] DEBUG: KmerSeqIterable: Splits of len=2860 to: [2860]
+[2020-05-13 12:12:35.661118] DEBUG: SeqGenerator: input seq len: 4850
+[2020-05-13 12:12:35.662115] DEBUG: KmerSeqIterable: Splits of len=4850 to: [4850]
+[2020-05-13 12:12:35.697022] DEBUG: SeqGenerator: input seq len: 2973
+[2020-05-13 12:12:35.698019] DEBUG: KmerSeqIterable: Splits of len=2973 to: [2973]
+[2020-05-13 12:12:35.719960] DEBUG: SeqGenerator: input seq len: 4234
+[2020-05-13 12:12:35.723951] DEBUG: KmerSeqIterable: Splits of len=4234 to: [4234]
+[2020-05-13 12:12:35.752872] DEBUG: SeqGenerator: input seq len: 3919
+[2020-05-13 12:12:35.752872] DEBUG: KmerSeqIterable: Splits of len=3919 to: [3919]
+[2020-05-13 12:12:35.778804] DEBUG: SeqGenerator: input seq len: 4392
+[2020-05-13 12:12:35.778804] DEBUG: KmerSeqIterable: Splits of len=4392 to: [4392]
+[2020-05-13 12:12:35.809720] DEBUG: SeqGenerator: input seq len: 2969
+[2020-05-13 12:12:35.809720] DEBUG: KmerSeqIterable: Splits of len=2969 to: [2969]
+[2020-05-13 12:12:35.829667] DEBUG: SeqGenerator: input seq len: 4295
+[2020-05-13 12:12:35.830665] DEBUG: KmerSeqIterable: Splits of len=4295 to: [4295]
+[2020-05-13 12:12:35.857593] DEBUG: SeqGenerator: input seq len: 4700
+[2020-05-13 12:12:35.857593] DEBUG: KmerSeqIterable: Splits of len=4700 to: [4700]
+[2020-05-13 12:12:35.887513] DEBUG: SeqGenerator: input seq len: 3826
+[2020-05-13 12:12:35.888509] DEBUG: KmerSeqIterable: Splits of len=3826 to: [3826]
+[2020-05-13 12:12:35.912446] DEBUG: SeqGenerator: input seq len: 3266
+[2020-05-13 12:12:35.916436] DEBUG: KmerSeqIterable: Splits of len=3266 to: [3266]
+[2020-05-13 12:12:35.938377] DEBUG: SeqGenerator: input seq len: 4794
+[2020-05-13 12:12:35.946862] DEBUG: KmerSeqIterable: Splits of len=4794 to: [4794]
+[2020-05-13 12:12:35.976781] DEBUG: SeqGenerator: input seq len: 3040
+[2020-05-13 12:12:35.977778] DEBUG: KmerSeqIterable: Splits of len=3040 to: [3040]
+[2020-05-13 12:12:35.996728] DEBUG: SeqGenerator: input seq len: 2526
+[2020-05-13 12:12:35.996728] DEBUG: KmerSeqIterable: Splits of len=2526 to: [2526]
+[2020-05-13 12:12:36.012684] DEBUG: SeqGenerator: input seq len: 2875
+[2020-05-13 12:12:36.022659] DEBUG: KmerSeqIterable: Splits of len=2875 to: [2875]
+[2020-05-13 12:12:36.042604] DEBUG: SeqGenerator: input seq len: 1818
+[2020-05-13 12:12:36.049094] DEBUG: KmerSeqIterable: Splits of len=1818 to: [1818]
+[2020-05-13 12:12:36.060063] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270752v1.fa
+[2020-05-13 12:12:36.063056] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:36.063056] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:36.064053] INFO: SeqGenerator: Whole fasta seqlen: 27745
+[2020-05-13 12:12:36.064053] DEBUG: SeqGenerator: input seq len: 4135
+[2020-05-13 12:12:36.064053] DEBUG: KmerSeqIterable: Splits of len=4135 to: [4135]
+[2020-05-13 12:12:36.089983] DEBUG: SeqGenerator: input seq len: 3035
+[2020-05-13 12:12:36.090981] DEBUG: KmerSeqIterable: Splits of len=3035 to: [3035]
+[2020-05-13 12:12:36.108933] DEBUG: SeqGenerator: input seq len: 4019
+[2020-05-13 12:12:36.108933] DEBUG: KmerSeqIterable: Splits of len=4019 to: [4019]
+[2020-05-13 12:12:36.133866] DEBUG: SeqGenerator: input seq len: 3296
+[2020-05-13 12:12:36.133866] DEBUG: KmerSeqIterable: Splits of len=3296 to: [3296]
+[2020-05-13 12:12:36.154810] DEBUG: SeqGenerator: input seq len: 3049
+[2020-05-13 12:12:36.160795] DEBUG: KmerSeqIterable: Splits of len=3049 to: [3049]
+[2020-05-13 12:12:36.178746] DEBUG: SeqGenerator: input seq len: 4128
+[2020-05-13 12:12:36.187723] DEBUG: KmerSeqIterable: Splits of len=4128 to: [4128]
+[2020-05-13 12:12:36.212655] DEBUG: SeqGenerator: input seq len: 2648
+[2020-05-13 12:12:36.216646] DEBUG: KmerSeqIterable: Splits of len=2648 to: [2648]
+[2020-05-13 12:12:36.232602] DEBUG: SeqGenerator: input seq len: 3435
+[2020-05-13 12:12:36.232602] DEBUG: KmerSeqIterable: Splits of len=3435 to: [3435]
+[2020-05-13 12:12:36.254543] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270753v1.fa
+[2020-05-13 12:12:36.257536] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:36.257536] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:36.258533] INFO: SeqGenerator: Whole fasta seqlen: 62944
+[2020-05-13 12:12:36.258533] DEBUG: SeqGenerator: input seq len: 3786
+[2020-05-13 12:12:36.258533] DEBUG: KmerSeqIterable: Splits of len=3786 to: [3786]
+[2020-05-13 12:12:36.281472] DEBUG: SeqGenerator: input seq len: 3831
+[2020-05-13 12:12:36.285461] DEBUG: KmerSeqIterable: Splits of len=3831 to: [3831]
+[2020-05-13 12:12:36.308399] DEBUG: SeqGenerator: input seq len: 3133
+[2020-05-13 12:12:36.312390] DEBUG: KmerSeqIterable: Splits of len=3133 to: [3133]
+[2020-05-13 12:12:36.331338] DEBUG: SeqGenerator: input seq len: 3714
+[2020-05-13 12:12:36.342309] DEBUG: KmerSeqIterable: Splits of len=3714 to: [3714]
+[2020-05-13 12:12:36.365247] DEBUG: SeqGenerator: input seq len: 3118
+[2020-05-13 12:12:36.370235] DEBUG: KmerSeqIterable: Splits of len=3118 to: [3118]
+[2020-05-13 12:12:36.388186] DEBUG: SeqGenerator: input seq len: 4415
+[2020-05-13 12:12:36.393174] DEBUG: KmerSeqIterable: Splits of len=4415 to: [4415]
+[2020-05-13 12:12:36.421099] DEBUG: SeqGenerator: input seq len: 4126
+[2020-05-13 12:12:36.421099] DEBUG: KmerSeqIterable: Splits of len=4126 to: [4126]
+[2020-05-13 12:12:36.452015] DEBUG: SeqGenerator: input seq len: 4866
+[2020-05-13 12:12:36.453013] DEBUG: KmerSeqIterable: Splits of len=4866 to: [4866]
+[2020-05-13 12:12:36.480938] DEBUG: SeqGenerator: input seq len: 4497
+[2020-05-13 12:12:36.481935] DEBUG: KmerSeqIterable: Splits of len=4497 to: [4497]
+[2020-05-13 12:12:36.507866] DEBUG: SeqGenerator: input seq len: 3155
+[2020-05-13 12:12:36.508863] DEBUG: KmerSeqIterable: Splits of len=3155 to: [3155]
+[2020-05-13 12:12:36.531802] DEBUG: SeqGenerator: input seq len: 2740
+[2020-05-13 12:12:36.532799] DEBUG: KmerSeqIterable: Splits of len=2740 to: [2740]
+[2020-05-13 12:12:36.549754] DEBUG: SeqGenerator: input seq len: 2828
+[2020-05-13 12:12:36.551749] DEBUG: KmerSeqIterable: Splits of len=2828 to: [2828]
+[2020-05-13 12:12:36.569701] DEBUG: SeqGenerator: input seq len: 4782
+[2020-05-13 12:12:36.570698] DEBUG: KmerSeqIterable: Splits of len=4782 to: [4782]
+[2020-05-13 12:12:36.597626] DEBUG: SeqGenerator: input seq len: 4819
+[2020-05-13 12:12:36.598623] DEBUG: KmerSeqIterable: Splits of len=4819 to: [4819]
+[2020-05-13 12:12:36.627545] DEBUG: SeqGenerator: input seq len: 3021
+[2020-05-13 12:12:36.627545] DEBUG: KmerSeqIterable: Splits of len=3021 to: [3021]
+[2020-05-13 12:12:36.646495] DEBUG: SeqGenerator: input seq len: 4590
+[2020-05-13 12:12:36.649487] DEBUG: KmerSeqIterable: Splits of len=4590 to: [4590]
+[2020-05-13 12:12:36.677412] DEBUG: SeqGenerator: input seq len: 1523
+[2020-05-13 12:12:36.677412] DEBUG: KmerSeqIterable: Splits of len=1523 to: [1523]
+[2020-05-13 12:12:36.687386] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270754v1.fa
+[2020-05-13 12:12:36.687386] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:36.687386] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:36.688383] INFO: SeqGenerator: Whole fasta seqlen: 40191
+[2020-05-13 12:12:36.688383] DEBUG: SeqGenerator: input seq len: 4639
+[2020-05-13 12:12:36.694367] DEBUG: KmerSeqIterable: Splits of len=4639 to: [4639]
+[2020-05-13 12:12:36.722293] DEBUG: SeqGenerator: input seq len: 4460
+[2020-05-13 12:12:36.722293] DEBUG: KmerSeqIterable: Splits of len=4460 to: [4460]
+[2020-05-13 12:12:36.751215] DEBUG: SeqGenerator: input seq len: 4955
+[2020-05-13 12:12:36.752212] DEBUG: KmerSeqIterable: Splits of len=4955 to: [4955]
+[2020-05-13 12:12:36.781135] DEBUG: SeqGenerator: input seq len: 3367
+[2020-05-13 12:12:36.781135] DEBUG: KmerSeqIterable: Splits of len=3367 to: [3367]
+[2020-05-13 12:12:36.802079] DEBUG: SeqGenerator: input seq len: 3347
+[2020-05-13 12:12:36.802079] DEBUG: KmerSeqIterable: Splits of len=3347 to: [3347]
+[2020-05-13 12:12:36.823023] DEBUG: SeqGenerator: input seq len: 3985
+[2020-05-13 12:12:36.823023] DEBUG: KmerSeqIterable: Splits of len=3985 to: [3985]
+[2020-05-13 12:12:36.846959] DEBUG: SeqGenerator: input seq len: 3631
+[2020-05-13 12:12:36.846959] DEBUG: KmerSeqIterable: Splits of len=3631 to: [3631]
+[2020-05-13 12:12:36.869897] DEBUG: SeqGenerator: input seq len: 3570
+[2020-05-13 12:12:36.869897] DEBUG: KmerSeqIterable: Splits of len=3570 to: [3570]
+[2020-05-13 12:12:36.890842] DEBUG: SeqGenerator: input seq len: 3290
+[2020-05-13 12:12:36.891839] DEBUG: KmerSeqIterable: Splits of len=3290 to: [3290]
+[2020-05-13 12:12:36.911786] DEBUG: SeqGenerator: input seq len: 2659
+[2020-05-13 12:12:36.913780] DEBUG: KmerSeqIterable: Splits of len=2659 to: [2659]
+[2020-05-13 12:12:36.930735] DEBUG: SeqGenerator: input seq len: 2288
+[2020-05-13 12:12:36.930735] DEBUG: KmerSeqIterable: Splits of len=2288 to: [2288]
+[2020-05-13 12:12:36.944698] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270755v1.fa
+[2020-05-13 12:12:36.948687] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:36.948687] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:36.948687] INFO: SeqGenerator: Whole fasta seqlen: 36723
+[2020-05-13 12:12:36.949685] DEBUG: SeqGenerator: input seq len: 3871
+[2020-05-13 12:12:36.955668] DEBUG: KmerSeqIterable: Splits of len=3871 to: [3871]
+[2020-05-13 12:12:36.980601] DEBUG: SeqGenerator: input seq len: 4704
+[2020-05-13 12:12:36.980601] DEBUG: KmerSeqIterable: Splits of len=4704 to: [4704]
+[2020-05-13 12:12:37.011519] DEBUG: SeqGenerator: input seq len: 3508
+[2020-05-13 12:12:37.012517] DEBUG: KmerSeqIterable: Splits of len=3508 to: [3508]
+[2020-05-13 12:12:37.039444] DEBUG: SeqGenerator: input seq len: 3522
+[2020-05-13 12:12:37.040442] DEBUG: KmerSeqIterable: Splits of len=3522 to: [3522]
+[2020-05-13 12:12:37.060389] DEBUG: SeqGenerator: input seq len: 3676
+[2020-05-13 12:12:37.061386] DEBUG: KmerSeqIterable: Splits of len=3676 to: [3676]
+[2020-05-13 12:12:37.082330] DEBUG: SeqGenerator: input seq len: 4106
+[2020-05-13 12:12:37.082330] DEBUG: KmerSeqIterable: Splits of len=4106 to: [4106]
+[2020-05-13 12:12:37.106265] DEBUG: SeqGenerator: input seq len: 4723
+[2020-05-13 12:12:37.107263] DEBUG: KmerSeqIterable: Splits of len=4723 to: [4723]
+[2020-05-13 12:12:37.138180] DEBUG: SeqGenerator: input seq len: 3079
+[2020-05-13 12:12:37.138180] DEBUG: KmerSeqIterable: Splits of len=3079 to: [3079]
+[2020-05-13 12:12:37.156132] DEBUG: SeqGenerator: input seq len: 4419
+[2020-05-13 12:12:37.157129] DEBUG: KmerSeqIterable: Splits of len=4419 to: [4419]
+[2020-05-13 12:12:37.187049] DEBUG: SeqGenerator: input seq len: 1115
+[2020-05-13 12:12:37.187049] DEBUG: KmerSeqIterable: Splits of len=1115 to: [1115]
+[2020-05-13 12:12:37.195028] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270756v1.fa
+[2020-05-13 12:12:37.198020] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:37.198020] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:37.199030] INFO: SeqGenerator: Whole fasta seqlen: 79590
+[2020-05-13 12:12:37.200015] DEBUG: SeqGenerator: input seq len: 3592
+[2020-05-13 12:12:37.205001] DEBUG: KmerSeqIterable: Splits of len=3592 to: [3592]
+[2020-05-13 12:12:37.230932] DEBUG: SeqGenerator: input seq len: 2937
+[2020-05-13 12:12:37.231929] DEBUG: KmerSeqIterable: Splits of len=2937 to: [2937]
+[2020-05-13 12:12:37.249881] DEBUG: SeqGenerator: input seq len: 3424
+[2020-05-13 12:12:37.249881] DEBUG: KmerSeqIterable: Splits of len=3424 to: [3424]
+[2020-05-13 12:12:37.271822] DEBUG: SeqGenerator: input seq len: 2785
+[2020-05-13 12:12:37.271822] DEBUG: KmerSeqIterable: Splits of len=2785 to: [1389, 1330]
+[2020-05-13 12:12:37.288778] DEBUG: SeqGenerator: input seq len: 4677
+[2020-05-13 12:12:37.289775] DEBUG: KmerSeqIterable: Splits of len=4677 to: [4677]
+[2020-05-13 12:12:37.316702] DEBUG: SeqGenerator: input seq len: 3758
+[2020-05-13 12:12:37.316702] DEBUG: KmerSeqIterable: Splits of len=3758 to: [3758]
+[2020-05-13 12:12:37.342633] DEBUG: SeqGenerator: input seq len: 3481
+[2020-05-13 12:12:37.343631] DEBUG: KmerSeqIterable: Splits of len=3481 to: [3481]
+[2020-05-13 12:12:37.368564] DEBUG: SeqGenerator: input seq len: 2555
+[2020-05-13 12:12:37.369561] DEBUG: KmerSeqIterable: Splits of len=2555 to: [2555]
+[2020-05-13 12:12:37.386532] DEBUG: SeqGenerator: input seq len: 2872
+[2020-05-13 12:12:37.386532] DEBUG: KmerSeqIterable: Splits of len=2872 to: [2872]
+[2020-05-13 12:12:37.404468] DEBUG: SeqGenerator: input seq len: 4296
+[2020-05-13 12:12:37.404468] DEBUG: KmerSeqIterable: Splits of len=4296 to: [4296]
+[2020-05-13 12:12:37.432393] DEBUG: SeqGenerator: input seq len: 2727
+[2020-05-13 12:12:37.432393] DEBUG: KmerSeqIterable: Splits of len=2727 to: [2727]
+[2020-05-13 12:12:37.449348] DEBUG: SeqGenerator: input seq len: 3326
+[2020-05-13 12:12:37.449348] DEBUG: KmerSeqIterable: Splits of len=3326 to: [3326]
+[2020-05-13 12:12:37.468801] DEBUG: SeqGenerator: input seq len: 2700
+[2020-05-13 12:12:37.469798] DEBUG: KmerSeqIterable: Splits of len=2700 to: [2700]
+[2020-05-13 12:12:37.486753] DEBUG: SeqGenerator: input seq len: 4942
+[2020-05-13 12:12:37.490743] DEBUG: KmerSeqIterable: Splits of len=4942 to: [4942]
+[2020-05-13 12:12:37.521660] DEBUG: SeqGenerator: input seq len: 3076
+[2020-05-13 12:12:37.522657] DEBUG: KmerSeqIterable: Splits of len=3076 to: [3076]
+[2020-05-13 12:12:37.541607] DEBUG: SeqGenerator: input seq len: 3087
+[2020-05-13 12:12:37.541607] DEBUG: KmerSeqIterable: Splits of len=3087 to: [3087]
+[2020-05-13 12:12:37.560063] DEBUG: SeqGenerator: input seq len: 3188
+[2020-05-13 12:12:37.560063] DEBUG: KmerSeqIterable: Splits of len=3188 to: [3188]
+[2020-05-13 12:12:37.579012] DEBUG: SeqGenerator: input seq len: 3966
+[2020-05-13 12:12:37.580009] DEBUG: KmerSeqIterable: Splits of len=3966 to: [3966]
+[2020-05-13 12:12:37.606937] DEBUG: SeqGenerator: input seq len: 4914
+[2020-05-13 12:12:37.606937] DEBUG: KmerSeqIterable: Splits of len=4914 to: [4914]
+[2020-05-13 12:12:37.638852] DEBUG: SeqGenerator: input seq len: 4116
+[2020-05-13 12:12:37.638852] DEBUG: KmerSeqIterable: Splits of len=4116 to: [4116]
+[2020-05-13 12:12:37.663785] DEBUG: SeqGenerator: input seq len: 4339
+[2020-05-13 12:12:37.663785] DEBUG: KmerSeqIterable: Splits of len=4339 to: [4339]
+[2020-05-13 12:12:37.689716] DEBUG: SeqGenerator: input seq len: 4377
+[2020-05-13 12:12:37.690713] DEBUG: KmerSeqIterable: Splits of len=4377 to: [4377]
+[2020-05-13 12:12:37.720633] DEBUG: SeqGenerator: input seq len: 455
+[2020-05-13 12:12:37.721631] DEBUG: KmerSeqIterable: Splits of len=455 to: [455]
+[2020-05-13 12:12:37.724622] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270757v1.fa
+[2020-05-13 12:12:37.724622] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:37.724622] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:37.725620] INFO: SeqGenerator: Whole fasta seqlen: 71251
+[2020-05-13 12:12:37.725620] DEBUG: SeqGenerator: input seq len: 4979
+[2020-05-13 12:12:37.725620] DEBUG: KmerSeqIterable: Splits of len=4979 to: [4979]
+[2020-05-13 12:12:37.755540] DEBUG: SeqGenerator: input seq len: 3765
+[2020-05-13 12:12:37.755540] DEBUG: KmerSeqIterable: Splits of len=3765 to: [3765]
+[2020-05-13 12:12:37.778478] DEBUG: SeqGenerator: input seq len: 4973
+[2020-05-13 12:12:37.778478] DEBUG: KmerSeqIterable: Splits of len=4973 to: [1475]
+[2020-05-13 12:12:37.787454] DEBUG: SeqGenerator: input seq len: 2868
+[2020-05-13 12:12:37.788452] DEBUG: KmerSeqIterable: Splits of len=2868 to: [2321]
+[2020-05-13 12:12:37.801417] DEBUG: SeqGenerator: input seq len: 4038
+[2020-05-13 12:12:37.802415] DEBUG: KmerSeqIterable: Splits of len=4038 to: [618, 204]
+[2020-05-13 12:12:37.807401] DEBUG: SeqGenerator: input seq len: 4645
+[2020-05-13 12:12:37.808399] DEBUG: KmerSeqIterable: Splits of len=4645 to: [4645]
+[2020-05-13 12:12:37.836324] DEBUG: SeqGenerator: input seq len: 2748
+[2020-05-13 12:12:37.836324] DEBUG: KmerSeqIterable: Splits of len=2748 to: [2748]
+[2020-05-13 12:12:37.852281] DEBUG: SeqGenerator: input seq len: 4435
+[2020-05-13 12:12:37.852281] DEBUG: KmerSeqIterable: Splits of len=4435 to: [4435]
+[2020-05-13 12:12:37.879210] DEBUG: SeqGenerator: input seq len: 2868
+[2020-05-13 12:12:37.879210] DEBUG: KmerSeqIterable: Splits of len=2868 to: [2868]
+[2020-05-13 12:12:37.896164] DEBUG: SeqGenerator: input seq len: 4546
+[2020-05-13 12:12:37.896164] DEBUG: KmerSeqIterable: Splits of len=4546 to: [4546]
+[2020-05-13 12:12:37.922094] DEBUG: SeqGenerator: input seq len: 3716
+[2020-05-13 12:12:37.923092] DEBUG: KmerSeqIterable: Splits of len=3716 to: [3716]
+[2020-05-13 12:12:37.945033] DEBUG: SeqGenerator: input seq len: 3540
+[2020-05-13 12:12:37.945033] DEBUG: KmerSeqIterable: Splits of len=3540 to: [630, 771]
+[2020-05-13 12:12:37.954009] DEBUG: SeqGenerator: input seq len: 3754
+[2020-05-13 12:12:37.954009] DEBUG: KmerSeqIterable: Splits of len=3754 to: [3754]
+[2020-05-13 12:12:37.977945] DEBUG: SeqGenerator: input seq len: 4088
+[2020-05-13 12:12:37.977945] DEBUG: KmerSeqIterable: Splits of len=4088 to: [4088]
+[2020-05-13 12:12:38.010857] DEBUG: SeqGenerator: input seq len: 4366
+[2020-05-13 12:12:38.011854] DEBUG: KmerSeqIterable: Splits of len=4366 to: [4366]
+[2020-05-13 12:12:38.039780] DEBUG: SeqGenerator: input seq len: 2697
+[2020-05-13 12:12:38.040777] DEBUG: KmerSeqIterable: Splits of len=2697 to: [2697]
+[2020-05-13 12:12:38.057732] DEBUG: SeqGenerator: input seq len: 4019
+[2020-05-13 12:12:38.058729] DEBUG: KmerSeqIterable: Splits of len=4019 to: [4019]
+[2020-05-13 12:12:38.088649] DEBUG: SeqGenerator: input seq len: 3130
+[2020-05-13 12:12:38.088649] DEBUG: KmerSeqIterable: Splits of len=3130 to: [3130]
+[2020-05-13 12:12:38.110590] DEBUG: SeqGenerator: input seq len: 2076
+[2020-05-13 12:12:38.110590] DEBUG: KmerSeqIterable: Splits of len=2076 to: [2076]
+[2020-05-13 12:12:38.125550] INFO: gensim.models.word2vec: collected 1344 word types from a corpus of 607874 raw words and 174 sentences
+[2020-05-13 12:12:38.128542] INFO: gensim.models.word2vec: Loading a fresh vocabulary
+[2020-05-13 12:12:38.129540] INFO: gensim.models.word2vec: effective_min_count=5 retains 1344 unique words (100% of original 1344, drops 0)
+[2020-05-13 12:12:38.135524] INFO: gensim.models.word2vec: effective_min_count=5 leaves 607874 word corpus (100% of original 607874, drops 0)
+[2020-05-13 12:12:38.138516] INFO: gensim.models.word2vec: deleting the raw counts dictionary of 1344 items
+[2020-05-13 12:12:38.143504] INFO: gensim.models.word2vec: sample=0.001 downsamples 77 most-common words
+[2020-05-13 12:12:38.149487] INFO: gensim.models.word2vec: downsampling leaves estimated 518943 word corpus (85.4% of prior 607874)
+[2020-05-13 12:12:38.153476] INFO: gensim.models.base_any2vec: estimated required memory for 1344 words and 12 dimensions: 801024 bytes
+[2020-05-13 12:12:38.153476] INFO: gensim.models.word2vec: resetting layer weights
+[2020-05-13 12:12:38.335987] INFO: gensim.models.base_any2vec: training model with 4 workers on 1344 vocabulary and 12 features, using sg=1 hs=0 sample=0.001 negative=5 window=4
+[2020-05-13 12:12:38.337982] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270750v1.fa
+[2020-05-13 12:12:38.343966] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:38.343966] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:38.344964] INFO: SeqGenerator: Whole fasta seqlen: 148850
+[2020-05-13 12:12:38.345961] DEBUG: SeqGenerator: input seq len: 3846
+[2020-05-13 12:12:38.351945] DEBUG: KmerSeqIterable: Splits of len=3846 to: [3846]
+[2020-05-13 12:12:38.372889] DEBUG: SeqGenerator: input seq len: 4594
+[2020-05-13 12:12:38.373886] DEBUG: KmerSeqIterable: Splits of len=4594 to: [4594]
+[2020-05-13 12:12:38.397822] DEBUG: SeqGenerator: input seq len: 4394
+[2020-05-13 12:12:38.398820] DEBUG: KmerSeqIterable: Splits of len=4394 to: [4394]
+[2020-05-13 12:12:38.423753] DEBUG: SeqGenerator: input seq len: 4886
+[2020-05-13 12:12:38.424750] DEBUG: KmerSeqIterable: Splits of len=4886 to: [4886]
+[2020-05-13 12:12:38.453672] DEBUG: SeqGenerator: input seq len: 2843
+[2020-05-13 12:12:38.453672] DEBUG: KmerSeqIterable: Splits of len=2843 to: [2843]
+[2020-05-13 12:12:38.469137] DEBUG: SeqGenerator: input seq len: 3011
+[2020-05-13 12:12:38.471132] DEBUG: KmerSeqIterable: Splits of len=3011 to: [3011]
+[2020-05-13 12:12:38.494070] DEBUG: SeqGenerator: input seq len: 4317
+[2020-05-13 12:12:38.494070] DEBUG: KmerSeqIterable: Splits of len=4317 to: [4317]
+[2020-05-13 12:12:38.516012] DEBUG: SeqGenerator: input seq len: 2544
+[2020-05-13 12:12:38.518007] DEBUG: KmerSeqIterable: Splits of len=2544 to: [2544]
+[2020-05-13 12:12:38.531969] DEBUG: SeqGenerator: input seq len: 2626
+[2020-05-13 12:12:38.532967] DEBUG: KmerSeqIterable: Splits of len=2626 to: [2626]
+[2020-05-13 12:12:38.552913] DEBUG: SeqGenerator: input seq len: 3945
+[2020-05-13 12:12:38.552913] DEBUG: KmerSeqIterable: Splits of len=3945 to: [3945]
+[2020-05-13 12:12:38.574855] DEBUG: SeqGenerator: input seq len: 2886
+[2020-05-13 12:12:38.575852] DEBUG: KmerSeqIterable: Splits of len=2886 to: [2886]
+[2020-05-13 12:12:38.591809] DEBUG: SeqGenerator: input seq len: 4720
+[2020-05-13 12:12:38.594801] DEBUG: KmerSeqIterable: Splits of len=4720 to: [4720]
+[2020-05-13 12:12:38.619734] DEBUG: SeqGenerator: input seq len: 3778
+[2020-05-13 12:12:38.621729] DEBUG: KmerSeqIterable: Splits of len=3778 to: [3778]
+[2020-05-13 12:12:38.644668] DEBUG: SeqGenerator: input seq len: 3304
+[2020-05-13 12:12:38.644668] DEBUG: KmerSeqIterable: Splits of len=3304 to: [3304]
+[2020-05-13 12:12:38.662620] DEBUG: SeqGenerator: input seq len: 3247
+[2020-05-13 12:12:38.663618] DEBUG: KmerSeqIterable: Splits of len=3247 to: [3247]
+[2020-05-13 12:12:38.681569] DEBUG: SeqGenerator: input seq len: 2958
+[2020-05-13 12:12:38.684561] DEBUG: KmerSeqIterable: Splits of len=2958 to: [2958]
+[2020-05-13 12:12:38.701516] DEBUG: SeqGenerator: input seq len: 2639
+[2020-05-13 12:12:38.701516] DEBUG: KmerSeqIterable: Splits of len=2639 to: [2639]
+[2020-05-13 12:12:38.715478] DEBUG: SeqGenerator: input seq len: 3289
+[2020-05-13 12:12:38.717473] DEBUG: KmerSeqIterable: Splits of len=3289 to: [3289]
+[2020-05-13 12:12:38.739414] DEBUG: SeqGenerator: input seq len: 4135
+[2020-05-13 12:12:38.739414] DEBUG: KmerSeqIterable: Splits of len=4135 to: [4135]
+[2020-05-13 12:12:38.761356] DEBUG: SeqGenerator: input seq len: 4947
+[2020-05-13 12:12:38.763351] DEBUG: KmerSeqIterable: Splits of len=4947 to: [4947]
+[2020-05-13 12:12:38.789281] DEBUG: SeqGenerator: input seq len: 4999
+[2020-05-13 12:12:38.790278] DEBUG: KmerSeqIterable: Splits of len=4999 to: [4999]
+[2020-05-13 12:12:38.817207] DEBUG: SeqGenerator: input seq len: 3664
+[2020-05-13 12:12:38.819201] DEBUG: KmerSeqIterable: Splits of len=3664 to: [3664]
+[2020-05-13 12:12:38.841142] DEBUG: SeqGenerator: input seq len: 3124
+[2020-05-13 12:12:38.841142] DEBUG: KmerSeqIterable: Splits of len=3124 to: [3124]
+[2020-05-13 12:12:38.858098] DEBUG: SeqGenerator: input seq len: 4945
+[2020-05-13 12:12:38.860092] DEBUG: KmerSeqIterable: Splits of len=4945 to: [4945]
+[2020-05-13 12:12:38.894001] DEBUG: SeqGenerator: input seq len: 4217
+[2020-05-13 12:12:38.894001] DEBUG: KmerSeqIterable: Splits of len=4217 to: [4217]
+[2020-05-13 12:12:38.919932] DEBUG: SeqGenerator: input seq len: 3608
+[2020-05-13 12:12:38.920929] DEBUG: KmerSeqIterable: Splits of len=3608 to: [3608]
+[2020-05-13 12:12:38.942871] DEBUG: SeqGenerator: input seq len: 3106
+[2020-05-13 12:12:38.942871] DEBUG: KmerSeqIterable: Splits of len=3106 to: [3106]
+[2020-05-13 12:12:38.959825] DEBUG: SeqGenerator: input seq len: 2947
+[2020-05-13 12:12:38.963323] DEBUG: KmerSeqIterable: Splits of len=2947 to: [2947]
+[2020-05-13 12:12:38.982271] DEBUG: SeqGenerator: input seq len: 3104
+[2020-05-13 12:12:38.982271] DEBUG: KmerSeqIterable: Splits of len=3104 to: [3104]
+[2020-05-13 12:12:39.002218] DEBUG: SeqGenerator: input seq len: 3225
+[2020-05-13 12:12:39.002218] DEBUG: KmerSeqIterable: Splits of len=3225 to: [3225]
+[2020-05-13 12:12:39.024160] DEBUG: SeqGenerator: input seq len: 3532
+[2020-05-13 12:12:39.026154] DEBUG: KmerSeqIterable: Splits of len=3532 to: [3532]
+[2020-05-13 12:12:39.052085] DEBUG: SeqGenerator: input seq len: 3161
+[2020-05-13 12:12:39.052085] DEBUG: KmerSeqIterable: Splits of len=3161 to: [3161]
+[2020-05-13 12:12:39.069543] DEBUG: SeqGenerator: input seq len: 2523
+[2020-05-13 12:12:39.070542] DEBUG: KmerSeqIterable: Splits of len=2523 to: [2523]
+[2020-05-13 12:12:39.085501] DEBUG: SeqGenerator: input seq len: 3333
+[2020-05-13 12:12:39.086498] DEBUG: KmerSeqIterable: Splits of len=3333 to: [3333]
+[2020-05-13 12:12:39.106445] DEBUG: SeqGenerator: input seq len: 3360
+[2020-05-13 12:12:39.107442] DEBUG: KmerSeqIterable: Splits of len=3360 to: [3360]
+[2020-05-13 12:12:39.125394] DEBUG: SeqGenerator: input seq len: 4883
+[2020-05-13 12:12:39.125394] DEBUG: KmerSeqIterable: Splits of len=4883 to: [4883]
+[2020-05-13 12:12:39.154317] DEBUG: SeqGenerator: input seq len: 2887
+[2020-05-13 12:12:39.155314] DEBUG: KmerSeqIterable: Splits of len=2887 to: [2887]
+[2020-05-13 12:12:39.172774] DEBUG: SeqGenerator: input seq len: 3006
+[2020-05-13 12:12:39.179756] DEBUG: KmerSeqIterable: Splits of len=3006 to: [3006]
+[2020-05-13 12:12:39.195713] DEBUG: SeqGenerator: input seq len: 2885
+[2020-05-13 12:12:39.198705] DEBUG: KmerSeqIterable: Splits of len=2885 to: [2885]
+[2020-05-13 12:12:39.214662] DEBUG: SeqGenerator: input seq len: 3475
+[2020-05-13 12:12:39.215660] DEBUG: KmerSeqIterable: Splits of len=3475 to: [3475]
+[2020-05-13 12:12:39.238598] DEBUG: SeqGenerator: input seq len: 2706
+[2020-05-13 12:12:39.238598] DEBUG: KmerSeqIterable: Splits of len=2706 to: [2706]
+[2020-05-13 12:12:39.255553] DEBUG: SeqGenerator: input seq len: 3251
+[2020-05-13 12:12:39.257547] DEBUG: KmerSeqIterable: Splits of len=3251 to: [3251]
+[2020-05-13 12:12:39.276005] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270751v1.fa
+[2020-05-13 12:12:39.276005] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:39.276005] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:39.277999] INFO: SeqGenerator: Whole fasta seqlen: 150742
+[2020-05-13 12:12:39.283984] DEBUG: SeqGenerator: input seq len: 3331
+[2020-05-13 12:12:39.283984] DEBUG: KmerSeqIterable: Splits of len=3331 to: [3331]
+[2020-05-13 12:12:39.301936] DEBUG: SeqGenerator: input seq len: 3916
+[2020-05-13 12:12:39.301936] DEBUG: KmerSeqIterable: Splits of len=3916 to: [3916]
+[2020-05-13 12:12:39.322879] DEBUG: SeqGenerator: input seq len: 3699
+[2020-05-13 12:12:39.324874] DEBUG: KmerSeqIterable: Splits of len=3699 to: [3699]
+[2020-05-13 12:12:39.351803] DEBUG: SeqGenerator: input seq len: 2893
+[2020-05-13 12:12:39.351803] INFO: gensim.models.base_any2vec: EPOCH 1 - PROGRESS: at 24.71% examples, 128900 words/s, in_qsize 0, out_qsize 0
+[2020-05-13 12:12:39.351803] DEBUG: KmerSeqIterable: Splits of len=2893 to: [2893]
+[2020-05-13 12:12:39.367759] DEBUG: SeqGenerator: input seq len: 4177
+[2020-05-13 12:12:39.371748] DEBUG: KmerSeqIterable: Splits of len=4177 to: [4177]
+[2020-05-13 12:12:39.398676] DEBUG: SeqGenerator: input seq len: 2639
+[2020-05-13 12:12:39.398676] DEBUG: KmerSeqIterable: Splits of len=2639 to: [2639]
+[2020-05-13 12:12:39.413636] DEBUG: SeqGenerator: input seq len: 3202
+[2020-05-13 12:12:39.420618] DEBUG: KmerSeqIterable: Splits of len=3202 to: [3202]
+[2020-05-13 12:12:39.441562] DEBUG: SeqGenerator: input seq len: 4968
+[2020-05-13 12:12:39.443556] DEBUG: KmerSeqIterable: Splits of len=4968 to: [4968]
+[2020-05-13 12:12:39.483450] DEBUG: SeqGenerator: input seq len: 3065
+[2020-05-13 12:12:39.484447] DEBUG: KmerSeqIterable: Splits of len=3065 to: [3065]
+[2020-05-13 12:12:39.501402] DEBUG: SeqGenerator: input seq len: 4951
+[2020-05-13 12:12:39.503397] DEBUG: KmerSeqIterable: Splits of len=4951 to: [4951]
+[2020-05-13 12:12:39.531322] DEBUG: SeqGenerator: input seq len: 3861
+[2020-05-13 12:12:39.531322] DEBUG: KmerSeqIterable: Splits of len=3861 to: [3861]
+[2020-05-13 12:12:39.553263] DEBUG: SeqGenerator: input seq len: 3439
+[2020-05-13 12:12:39.554261] DEBUG: KmerSeqIterable: Splits of len=3439 to: [3439]
+[2020-05-13 12:12:39.574207] DEBUG: SeqGenerator: input seq len: 4727
+[2020-05-13 12:12:39.575205] DEBUG: KmerSeqIterable: Splits of len=4727 to: [4727]
+[2020-05-13 12:12:39.601135] DEBUG: SeqGenerator: input seq len: 2966
+[2020-05-13 12:12:39.603130] DEBUG: KmerSeqIterable: Splits of len=2966 to: [2966]
+[2020-05-13 12:12:39.622079] DEBUG: SeqGenerator: input seq len: 3578
+[2020-05-13 12:12:39.625071] DEBUG: KmerSeqIterable: Splits of len=3578 to: [3578]
+[2020-05-13 12:12:39.645018] DEBUG: SeqGenerator: input seq len: 4458
+[2020-05-13 12:12:39.646015] DEBUG: KmerSeqIterable: Splits of len=4458 to: [4458]
+[2020-05-13 12:12:39.669951] DEBUG: SeqGenerator: input seq len: 3075
+[2020-05-13 12:12:39.670949] DEBUG: KmerSeqIterable: Splits of len=3075 to: [3075]
+[2020-05-13 12:12:39.686906] DEBUG: SeqGenerator: input seq len: 3088
+[2020-05-13 12:12:39.691892] DEBUG: KmerSeqIterable: Splits of len=3088 to: [3088]
+[2020-05-13 12:12:39.712836] DEBUG: SeqGenerator: input seq len: 4257
+[2020-05-13 12:12:39.712836] DEBUG: KmerSeqIterable: Splits of len=4257 to: [4257]
+[2020-05-13 12:12:39.735775] DEBUG: SeqGenerator: input seq len: 4656
+[2020-05-13 12:12:39.736772] DEBUG: KmerSeqIterable: Splits of len=4656 to: [4656]
+[2020-05-13 12:12:39.763700] DEBUG: SeqGenerator: input seq len: 3321
+[2020-05-13 12:12:39.763700] DEBUG: KmerSeqIterable: Splits of len=3321 to: [3321]
+[2020-05-13 12:12:39.781652] DEBUG: SeqGenerator: input seq len: 2793
+[2020-05-13 12:12:39.783647] DEBUG: KmerSeqIterable: Splits of len=2793 to: [2793]
+[2020-05-13 12:12:39.801599] DEBUG: SeqGenerator: input seq len: 4583
+[2020-05-13 12:12:39.802597] DEBUG: KmerSeqIterable: Splits of len=4583 to: [4583]
+[2020-05-13 12:12:39.829524] DEBUG: SeqGenerator: input seq len: 4689
+[2020-05-13 12:12:39.830522] DEBUG: KmerSeqIterable: Splits of len=4689 to: [4689]
+[2020-05-13 12:12:39.856452] DEBUG: SeqGenerator: input seq len: 3073
+[2020-05-13 12:12:39.856452] DEBUG: KmerSeqIterable: Splits of len=3073 to: [3073]
+[2020-05-13 12:12:39.875401] DEBUG: SeqGenerator: input seq len: 2860
+[2020-05-13 12:12:39.877396] DEBUG: KmerSeqIterable: Splits of len=2860 to: [2860]
+[2020-05-13 12:12:39.897343] DEBUG: SeqGenerator: input seq len: 4850
+[2020-05-13 12:12:39.897343] DEBUG: KmerSeqIterable: Splits of len=4850 to: [4850]
+[2020-05-13 12:12:39.923273] DEBUG: SeqGenerator: input seq len: 2973
+[2020-05-13 12:12:39.925268] DEBUG: KmerSeqIterable: Splits of len=2973 to: [2973]
+[2020-05-13 12:12:39.941225] DEBUG: SeqGenerator: input seq len: 4234
+[2020-05-13 12:12:39.943220] DEBUG: KmerSeqIterable: Splits of len=4234 to: [4234]
+[2020-05-13 12:12:39.969151] DEBUG: SeqGenerator: input seq len: 3919
+[2020-05-13 12:12:39.970148] DEBUG: KmerSeqIterable: Splits of len=3919 to: [3919]
+[2020-05-13 12:12:39.993087] DEBUG: SeqGenerator: input seq len: 4392
+[2020-05-13 12:12:39.993087] DEBUG: KmerSeqIterable: Splits of len=4392 to: [4392]
+[2020-05-13 12:12:40.025999] DEBUG: SeqGenerator: input seq len: 2969
+[2020-05-13 12:12:40.027994] DEBUG: KmerSeqIterable: Splits of len=2969 to: [2969]
+[2020-05-13 12:12:40.051930] DEBUG: SeqGenerator: input seq len: 4295
+[2020-05-13 12:12:40.055919] DEBUG: KmerSeqIterable: Splits of len=4295 to: [4295]
+[2020-05-13 12:12:40.096810] DEBUG: SeqGenerator: input seq len: 4700
+[2020-05-13 12:12:40.097807] DEBUG: KmerSeqIterable: Splits of len=4700 to: [4700]
+[2020-05-13 12:12:40.139695] DEBUG: SeqGenerator: input seq len: 3826
+[2020-05-13 12:12:40.139695] DEBUG: KmerSeqIterable: Splits of len=3826 to: [3826]
+[2020-05-13 12:12:40.173112] DEBUG: SeqGenerator: input seq len: 3266
+[2020-05-13 12:12:40.175107] DEBUG: KmerSeqIterable: Splits of len=3266 to: [3266]
+[2020-05-13 12:12:40.208019] DEBUG: SeqGenerator: input seq len: 4794
+[2020-05-13 12:12:40.209016] DEBUG: KmerSeqIterable: Splits of len=4794 to: [4794]
+[2020-05-13 12:12:40.243922] DEBUG: SeqGenerator: input seq len: 3040
+[2020-05-13 12:12:40.244920] DEBUG: KmerSeqIterable: Splits of len=3040 to: [3040]
+[2020-05-13 12:12:40.263869] DEBUG: SeqGenerator: input seq len: 2526
+[2020-05-13 12:12:40.267858] DEBUG: KmerSeqIterable: Splits of len=2526 to: [2526]
+[2020-05-13 12:12:40.284813] DEBUG: SeqGenerator: input seq len: 2875
+[2020-05-13 12:12:40.288803] DEBUG: KmerSeqIterable: Splits of len=2875 to: [2875]
+[2020-05-13 12:12:40.306755] DEBUG: SeqGenerator: input seq len: 1818
+[2020-05-13 12:12:40.309746] DEBUG: KmerSeqIterable: Splits of len=1818 to: [1818]
+[2020-05-13 12:12:40.320717] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270752v1.fa
+[2020-05-13 12:12:40.320717] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:40.320717] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:40.321714] INFO: SeqGenerator: Whole fasta seqlen: 27745
+[2020-05-13 12:12:40.321714] DEBUG: SeqGenerator: input seq len: 4135
+[2020-05-13 12:12:40.321714] DEBUG: KmerSeqIterable: Splits of len=4135 to: [4135]
+[2020-05-13 12:12:40.347645] DEBUG: SeqGenerator: input seq len: 3035
+[2020-05-13 12:12:40.348642] DEBUG: KmerSeqIterable: Splits of len=3035 to: [3035]
+[2020-05-13 12:12:40.366595] DEBUG: SeqGenerator: input seq len: 4019
+[2020-05-13 12:12:40.366595] INFO: gensim.models.base_any2vec: EPOCH 1 - PROGRESS: at 47.70% examples, 126673 words/s, in_qsize 0, out_qsize 0
+[2020-05-13 12:12:40.366595] DEBUG: KmerSeqIterable: Splits of len=4019 to: [4019]
+[2020-05-13 12:12:40.389533] DEBUG: SeqGenerator: input seq len: 3296
+[2020-05-13 12:12:40.391528] DEBUG: KmerSeqIterable: Splits of len=3296 to: [3296]
+[2020-05-13 12:12:40.410477] DEBUG: SeqGenerator: input seq len: 3049
+[2020-05-13 12:12:40.410477] DEBUG: KmerSeqIterable: Splits of len=3049 to: [3049]
+[2020-05-13 12:12:40.429426] DEBUG: SeqGenerator: input seq len: 4128
+[2020-05-13 12:12:40.437405] DEBUG: KmerSeqIterable: Splits of len=4128 to: [4128]
+[2020-05-13 12:12:40.459346] DEBUG: SeqGenerator: input seq len: 2648
+[2020-05-13 12:12:40.462338] DEBUG: KmerSeqIterable: Splits of len=2648 to: [2648]
+[2020-05-13 12:12:40.476301] DEBUG: SeqGenerator: input seq len: 3435
+[2020-05-13 12:12:40.482285] DEBUG: KmerSeqIterable: Splits of len=3435 to: [3435]
+[2020-05-13 12:12:40.503229] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270753v1.fa
+[2020-05-13 12:12:40.504227] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:40.504227] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:40.505223] INFO: SeqGenerator: Whole fasta seqlen: 62944
+[2020-05-13 12:12:40.505223] DEBUG: SeqGenerator: input seq len: 3786
+[2020-05-13 12:12:40.506221] DEBUG: KmerSeqIterable: Splits of len=3786 to: [3786]
+[2020-05-13 12:12:40.531154] DEBUG: SeqGenerator: input seq len: 3831
+[2020-05-13 12:12:40.532151] DEBUG: KmerSeqIterable: Splits of len=3831 to: [3831]
+[2020-05-13 12:12:40.552098] DEBUG: SeqGenerator: input seq len: 3133
+[2020-05-13 12:12:40.554093] DEBUG: KmerSeqIterable: Splits of len=3133 to: [3133]
+[2020-05-13 12:12:40.574039] DEBUG: SeqGenerator: input seq len: 3714
+[2020-05-13 12:12:40.575038] DEBUG: KmerSeqIterable: Splits of len=3714 to: [3714]
+[2020-05-13 12:12:40.594984] DEBUG: SeqGenerator: input seq len: 3118
+[2020-05-13 12:12:40.596979] DEBUG: KmerSeqIterable: Splits of len=3118 to: [3118]
+[2020-05-13 12:12:40.614930] DEBUG: SeqGenerator: input seq len: 4415
+[2020-05-13 12:12:40.614930] DEBUG: KmerSeqIterable: Splits of len=4415 to: [4415]
+[2020-05-13 12:12:40.639863] DEBUG: SeqGenerator: input seq len: 4126
+[2020-05-13 12:12:40.640861] DEBUG: KmerSeqIterable: Splits of len=4126 to: [4126]
+[2020-05-13 12:12:40.664797] DEBUG: SeqGenerator: input seq len: 4866
+[2020-05-13 12:12:40.665794] DEBUG: KmerSeqIterable: Splits of len=4866 to: [4866]
+[2020-05-13 12:12:40.694224] DEBUG: SeqGenerator: input seq len: 4497
+[2020-05-13 12:12:40.696219] DEBUG: KmerSeqIterable: Splits of len=4497 to: [4497]
+[2020-05-13 12:12:40.721152] DEBUG: SeqGenerator: input seq len: 3155
+[2020-05-13 12:12:40.721152] DEBUG: KmerSeqIterable: Splits of len=3155 to: [3155]
+[2020-05-13 12:12:40.738107] DEBUG: SeqGenerator: input seq len: 2740
+[2020-05-13 12:12:40.740102] DEBUG: KmerSeqIterable: Splits of len=2740 to: [2740]
+[2020-05-13 12:12:40.756059] DEBUG: SeqGenerator: input seq len: 2828
+[2020-05-13 12:12:40.760048] DEBUG: KmerSeqIterable: Splits of len=2828 to: [2828]
+[2020-05-13 12:12:40.776510] DEBUG: SeqGenerator: input seq len: 4782
+[2020-05-13 12:12:40.777508] DEBUG: KmerSeqIterable: Splits of len=4782 to: [4782]
+[2020-05-13 12:12:40.804435] DEBUG: SeqGenerator: input seq len: 4819
+[2020-05-13 12:12:40.805432] DEBUG: KmerSeqIterable: Splits of len=4819 to: [4819]
+[2020-05-13 12:12:40.833358] DEBUG: SeqGenerator: input seq len: 3021
+[2020-05-13 12:12:40.833358] DEBUG: KmerSeqIterable: Splits of len=3021 to: [3021]
+[2020-05-13 12:12:40.850312] DEBUG: SeqGenerator: input seq len: 4590
+[2020-05-13 12:12:40.852308] DEBUG: KmerSeqIterable: Splits of len=4590 to: [4590]
+[2020-05-13 12:12:40.876747] DEBUG: SeqGenerator: input seq len: 1523
+[2020-05-13 12:12:40.876747] DEBUG: KmerSeqIterable: Splits of len=1523 to: [1523]
+[2020-05-13 12:12:40.885724] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270754v1.fa
+[2020-05-13 12:12:40.885724] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:40.886722] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:40.886722] INFO: SeqGenerator: Whole fasta seqlen: 40191
+[2020-05-13 12:12:40.886722] DEBUG: SeqGenerator: input seq len: 4639
+[2020-05-13 12:12:40.892705] DEBUG: KmerSeqIterable: Splits of len=4639 to: [4639]
+[2020-05-13 12:12:40.918635] DEBUG: SeqGenerator: input seq len: 4460
+[2020-05-13 12:12:40.920630] DEBUG: KmerSeqIterable: Splits of len=4460 to: [4460]
+[2020-05-13 12:12:40.948556] DEBUG: SeqGenerator: input seq len: 4955
+[2020-05-13 12:12:40.948556] DEBUG: KmerSeqIterable: Splits of len=4955 to: [4955]
+[2020-05-13 12:12:40.976985] DEBUG: SeqGenerator: input seq len: 3367
+[2020-05-13 12:12:40.978980] DEBUG: KmerSeqIterable: Splits of len=3367 to: [3367]
+[2020-05-13 12:12:40.999924] DEBUG: SeqGenerator: input seq len: 3347
+[2020-05-13 12:12:40.999924] DEBUG: KmerSeqIterable: Splits of len=3347 to: [3347]
+[2020-05-13 12:12:41.020868] DEBUG: SeqGenerator: input seq len: 3985
+[2020-05-13 12:12:41.021865] DEBUG: KmerSeqIterable: Splits of len=3985 to: [3985]
+[2020-05-13 12:12:41.048793] DEBUG: SeqGenerator: input seq len: 3631
+[2020-05-13 12:12:41.048793] DEBUG: KmerSeqIterable: Splits of len=3631 to: [3631]
+[2020-05-13 12:12:41.067742] DEBUG: SeqGenerator: input seq len: 3570
+[2020-05-13 12:12:41.069737] DEBUG: KmerSeqIterable: Splits of len=3570 to: [3570]
+[2020-05-13 12:12:41.094670] DEBUG: SeqGenerator: input seq len: 3290
+[2020-05-13 12:12:41.094670] DEBUG: KmerSeqIterable: Splits of len=3290 to: [3290]
+[2020-05-13 12:12:41.112622] DEBUG: SeqGenerator: input seq len: 2659
+[2020-05-13 12:12:41.114617] DEBUG: KmerSeqIterable: Splits of len=2659 to: [2659]
+[2020-05-13 12:12:41.133567] DEBUG: SeqGenerator: input seq len: 2288
+[2020-05-13 12:12:41.133567] DEBUG: KmerSeqIterable: Splits of len=2288 to: [2288]
+[2020-05-13 12:12:41.147529] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270755v1.fa
+[2020-05-13 12:12:41.149524] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:41.149524] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:41.150521] INFO: SeqGenerator: Whole fasta seqlen: 36723
+[2020-05-13 12:12:41.150521] DEBUG: SeqGenerator: input seq len: 3871
+[2020-05-13 12:12:41.150521] DEBUG: KmerSeqIterable: Splits of len=3871 to: [3871]
+[2020-05-13 12:12:41.171465] DEBUG: SeqGenerator: input seq len: 4704
+[2020-05-13 12:12:41.173460] DEBUG: KmerSeqIterable: Splits of len=4704 to: [4704]
+[2020-05-13 12:12:41.200388] DEBUG: SeqGenerator: input seq len: 3508
+[2020-05-13 12:12:41.200388] DEBUG: KmerSeqIterable: Splits of len=3508 to: [3508]
+[2020-05-13 12:12:41.220334] DEBUG: SeqGenerator: input seq len: 3522
+[2020-05-13 12:12:41.222329] DEBUG: KmerSeqIterable: Splits of len=3522 to: [3522]
+[2020-05-13 12:12:41.244270] DEBUG: SeqGenerator: input seq len: 3676
+[2020-05-13 12:12:41.244270] DEBUG: KmerSeqIterable: Splits of len=3676 to: [3676]
+[2020-05-13 12:12:41.267209] DEBUG: SeqGenerator: input seq len: 4106
+[2020-05-13 12:12:41.269204] DEBUG: KmerSeqIterable: Splits of len=4106 to: [4106]
+[2020-05-13 12:12:41.292142] DEBUG: SeqGenerator: input seq len: 4723
+[2020-05-13 12:12:41.292142] DEBUG: KmerSeqIterable: Splits of len=4723 to: [4723]
+[2020-05-13 12:12:41.317075] DEBUG: SeqGenerator: input seq len: 3079
+[2020-05-13 12:12:41.318073] DEBUG: KmerSeqIterable: Splits of len=3079 to: [3079]
+[2020-05-13 12:12:41.336025] DEBUG: SeqGenerator: input seq len: 4419
+[2020-05-13 12:12:41.337022] DEBUG: KmerSeqIterable: Splits of len=4419 to: [4419]
+[2020-05-13 12:12:41.362953] DEBUG: SeqGenerator: input seq len: 1115
+[2020-05-13 12:12:41.364948] DEBUG: KmerSeqIterable: Splits of len=1115 to: [1115]
+[2020-05-13 12:12:41.371929] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270756v1.fa
+[2020-05-13 12:12:41.371929] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:41.371929] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:41.372927] INFO: SeqGenerator: Whole fasta seqlen: 79590
+[2020-05-13 12:12:41.373924] DEBUG: SeqGenerator: input seq len: 3592
+[2020-05-13 12:12:41.378910] DEBUG: KmerSeqIterable: Splits of len=3592 to: [3592]
+[2020-05-13 12:12:41.397859] DEBUG: SeqGenerator: input seq len: 2937
+[2020-05-13 12:12:41.397859] INFO: gensim.models.base_any2vec: EPOCH 1 - PROGRESS: at 72.99% examples, 129914 words/s, in_qsize 0, out_qsize 0
+[2020-05-13 12:12:41.398857] DEBUG: KmerSeqIterable: Splits of len=2937 to: [2937]
+[2020-05-13 12:12:41.419801] DEBUG: SeqGenerator: input seq len: 3424
+[2020-05-13 12:12:41.422794] DEBUG: KmerSeqIterable: Splits of len=3424 to: [3424]
+[2020-05-13 12:12:41.446729] DEBUG: SeqGenerator: input seq len: 2785
+[2020-05-13 12:12:41.448723] DEBUG: KmerSeqIterable: Splits of len=2785 to: [1389, 1330]
+[2020-05-13 12:12:41.463685] DEBUG: SeqGenerator: input seq len: 4677
+[2020-05-13 12:12:41.468671] DEBUG: KmerSeqIterable: Splits of len=4677 to: [4677]
+[2020-05-13 12:12:41.494601] DEBUG: SeqGenerator: input seq len: 3758
+[2020-05-13 12:12:41.495598] DEBUG: KmerSeqIterable: Splits of len=3758 to: [3758]
+[2020-05-13 12:12:41.521529] DEBUG: SeqGenerator: input seq len: 3481
+[2020-05-13 12:12:41.522526] DEBUG: KmerSeqIterable: Splits of len=3481 to: [3481]
+[2020-05-13 12:12:41.541475] DEBUG: SeqGenerator: input seq len: 2555
+[2020-05-13 12:12:41.543470] DEBUG: KmerSeqIterable: Splits of len=2555 to: [2555]
+[2020-05-13 12:12:41.557433] DEBUG: SeqGenerator: input seq len: 2872
+[2020-05-13 12:12:41.560425] DEBUG: KmerSeqIterable: Splits of len=2872 to: [2872]
+[2020-05-13 12:12:41.576382] DEBUG: SeqGenerator: input seq len: 4296
+[2020-05-13 12:12:41.576382] DEBUG: KmerSeqIterable: Splits of len=4296 to: [4296]
+[2020-05-13 12:12:41.599320] DEBUG: SeqGenerator: input seq len: 2727
+[2020-05-13 12:12:41.601315] DEBUG: KmerSeqIterable: Splits of len=2727 to: [2727]
+[2020-05-13 12:12:41.618270] DEBUG: SeqGenerator: input seq len: 3326
+[2020-05-13 12:12:41.624254] DEBUG: KmerSeqIterable: Splits of len=3326 to: [3326]
+[2020-05-13 12:12:41.643204] DEBUG: SeqGenerator: input seq len: 2700
+[2020-05-13 12:12:41.645198] DEBUG: KmerSeqIterable: Splits of len=2700 to: [2700]
+[2020-05-13 12:12:41.660158] DEBUG: SeqGenerator: input seq len: 4942
+[2020-05-13 12:12:41.665146] DEBUG: KmerSeqIterable: Splits of len=4942 to: [4942]
+[2020-05-13 12:12:41.691075] DEBUG: SeqGenerator: input seq len: 3076
+[2020-05-13 12:12:41.692072] DEBUG: KmerSeqIterable: Splits of len=3076 to: [3076]
+[2020-05-13 12:12:41.710025] DEBUG: SeqGenerator: input seq len: 3087
+[2020-05-13 12:12:41.712019] DEBUG: KmerSeqIterable: Splits of len=3087 to: [3087]
+[2020-05-13 12:12:41.728974] DEBUG: SeqGenerator: input seq len: 3188
+[2020-05-13 12:12:41.733961] DEBUG: KmerSeqIterable: Splits of len=3188 to: [3188]
+[2020-05-13 12:12:41.752910] DEBUG: SeqGenerator: input seq len: 3966
+[2020-05-13 12:12:41.753907] DEBUG: KmerSeqIterable: Splits of len=3966 to: [3966]
+[2020-05-13 12:12:41.775848] DEBUG: SeqGenerator: input seq len: 4914
+[2020-05-13 12:12:41.776846] DEBUG: KmerSeqIterable: Splits of len=4914 to: [4914]
+[2020-05-13 12:12:41.805768] DEBUG: SeqGenerator: input seq len: 4116
+[2020-05-13 12:12:41.805768] DEBUG: KmerSeqIterable: Splits of len=4116 to: [4116]
+[2020-05-13 12:12:41.828707] DEBUG: SeqGenerator: input seq len: 4339
+[2020-05-13 12:12:41.829704] DEBUG: KmerSeqIterable: Splits of len=4339 to: [4339]
+[2020-05-13 12:12:41.864611] DEBUG: SeqGenerator: input seq len: 4377
+[2020-05-13 12:12:41.864611] DEBUG: KmerSeqIterable: Splits of len=4377 to: [4377]
+[2020-05-13 12:12:41.889052] DEBUG: SeqGenerator: input seq len: 455
+[2020-05-13 12:12:41.890049] DEBUG: KmerSeqIterable: Splits of len=455 to: [455]
+[2020-05-13 12:12:41.894039] INFO: SeqGenerator: Opened file: example_inputs\chrUn_KI270757v1.fa
+[2020-05-13 12:12:41.896034] INFO: SeqGenerator: Memory usage: 0 MB
+[2020-05-13 12:12:41.896034] INFO: SeqGenerator: Current epoch: 1 / 1
+[2020-05-13 12:12:41.897031] INFO: SeqGenerator: Whole fasta seqlen: 71251
+[2020-05-13 12:12:41.897031] DEBUG: SeqGenerator: input seq len: 4979
+[2020-05-13 12:12:41.898028] DEBUG: KmerSeqIterable: Splits of len=4979 to: [4979]
+[2020-05-13 12:12:41.926951] DEBUG: SeqGenerator: input seq len: 3765
+[2020-05-13 12:12:41.926951] DEBUG: KmerSeqIterable: Splits of len=3765 to: [3765]
+[2020-05-13 12:12:41.946897] DEBUG: SeqGenerator: input seq len: 4973
+[2020-05-13 12:12:41.953880] DEBUG: KmerSeqIterable: Splits of len=4973 to: [1475]
+[2020-05-13 12:12:41.967842] DEBUG: SeqGenerator: input seq len: 2868
+[2020-05-13 12:12:41.971831] DEBUG: KmerSeqIterable: Splits of len=2868 to: [2321]
+[2020-05-13 12:12:41.983801] DEBUG: SeqGenerator: input seq len: 4038
+[2020-05-13 12:12:41.988786] DEBUG: KmerSeqIterable: Splits of len=4038 to: [618, 204]
+[2020-05-13 12:12:41.994770] DEBUG: SeqGenerator: input seq len: 4645
+[2020-05-13 12:12:41.997762] DEBUG: KmerSeqIterable: Splits of len=4645 to: [4645]
+[2020-05-13 12:12:42.031671] DEBUG: SeqGenerator: input seq len: 2748
+[2020-05-13 12:12:42.033665] DEBUG: KmerSeqIterable: Splits of len=2748 to: [2748]
+[2020-05-13 12:12:42.059596] DEBUG: SeqGenerator: input seq len: 4435
+[2020-05-13 12:12:42.059596] DEBUG: KmerSeqIterable: Splits of len=4435 to: [4435]
+[2020-05-13 12:12:42.087521] DEBUG: SeqGenerator: input seq len: 2868
+[2020-05-13 12:12:42.088519] DEBUG: KmerSeqIterable: Splits of len=2868 to: [2868]
+[2020-05-13 12:12:42.107468] DEBUG: SeqGenerator: input seq len: 4546
+[2020-05-13 12:12:42.109463] DEBUG: KmerSeqIterable: Splits of len=4546 to: [4546]
+[2020-05-13 12:12:42.136391] DEBUG: SeqGenerator: input seq len: 3716
+[2020-05-13 12:12:42.137388] DEBUG: KmerSeqIterable: Splits of len=3716 to: [3716]
+[2020-05-13 12:12:42.161324] DEBUG: SeqGenerator: input seq len: 3540
+[2020-05-13 12:12:42.162322] DEBUG: KmerSeqIterable: Splits of len=3540 to: [630, 771]
+[2020-05-13 12:12:42.169303] DEBUG: SeqGenerator: input seq len: 3754
+[2020-05-13 12:12:42.176285] DEBUG: KmerSeqIterable: Splits of len=3754 to: [3754]
+[2020-05-13 12:12:42.197228] DEBUG: SeqGenerator: input seq len: 4088
+[2020-05-13 12:12:42.199223] DEBUG: KmerSeqIterable: Splits of len=4088 to: [4088]
+[2020-05-13 12:12:42.229143] DEBUG: SeqGenerator: input seq len: 4366
+[2020-05-13 12:12:42.229143] DEBUG: KmerSeqIterable: Splits of len=4366 to: [4366]
+[2020-05-13 12:12:42.252081] DEBUG: SeqGenerator: input seq len: 2697
+[2020-05-13 12:12:42.253079] DEBUG: KmerSeqIterable: Splits of len=2697 to: [2697]
+[2020-05-13 12:12:42.274022] DEBUG: SeqGenerator: input seq len: 4019
+[2020-05-13 12:12:42.274022] DEBUG: KmerSeqIterable: Splits of len=4019 to: [4019]
+[2020-05-13 12:12:42.296961] DEBUG: SeqGenerator: input seq len: 3130
+[2020-05-13 12:12:42.297959] DEBUG: KmerSeqIterable: Splits of len=3130 to: [3130]
+[2020-05-13 12:12:42.315911] DEBUG: SeqGenerator: input seq len: 2076
+[2020-05-13 12:12:42.315911] DEBUG: KmerSeqIterable: Splits of len=2076 to: [2076]
+[2020-05-13 12:12:42.330871] DEBUG: gensim.models.base_any2vec: job loop exiting, total 75 jobs
+[2020-05-13 12:12:42.332865] DEBUG: gensim.models.base_any2vec: worker exiting, processed 19 jobs
+[2020-05-13 12:12:42.336855] DEBUG: gensim.models.base_any2vec: worker exiting, processed 19 jobs
+[2020-05-13 12:12:42.337853] DEBUG: gensim.models.base_any2vec: worker exiting, processed 18 jobs
+[2020-05-13 12:12:42.337853] INFO: gensim.models.base_any2vec: worker thread finished; awaiting finish of 3 more threads
+[2020-05-13 12:12:42.337853] INFO: gensim.models.base_any2vec: worker thread finished; awaiting finish of 2 more threads
+[2020-05-13 12:12:42.338850] INFO: gensim.models.base_any2vec: worker thread finished; awaiting finish of 1 more threads
+[2020-05-13 12:12:42.354807] DEBUG: gensim.models.base_any2vec: worker exiting, processed 19 jobs
+[2020-05-13 12:12:42.358820] INFO: gensim.models.base_any2vec: worker thread finished; awaiting finish of 0 more threads
+[2020-05-13 12:12:42.358820] INFO: gensim.models.base_any2vec: EPOCH - 1 : training on 607874 raw words (519076 effective words) took 4.0s, 129070 effective words/s
+[2020-05-13 12:12:42.359794] INFO: gensim.models.base_any2vec: training on a 607874 raw words (519076 effective words) took 4.0s, 129014 effective words/s
+[2020-05-13 12:12:42.365777] INFO: gensim.models.utils_any2vec: storing 1344x12 projection weights into ./tmp/dna2vec-20200513-1212-k3to5-12d-4c-0Mbp-sliding-TlX.w2v
+[2020-05-13 12:12:42.371761] DEBUG: smart_open.smart_open_lib: {'uri': './tmp/dna2vec-20200513-1212-k3to5-12d-4c-0Mbp-sliding-TlX.w2v', 'mode': 'wb', 'buffering': -1, 'encoding': None, 'errors': None, 'newline': None, 'closefd': True, 'opener': None, 'ignore_ext': False, 'transport_params': None}
+[2020-05-13 12:12:42.393210] INFO: Histogram: Percent of  3-mers: 33.3% (202162)
+[2020-05-13 12:12:42.393210] INFO: Histogram: Percent of  4-mers: 33.3% (202583)
+[2020-05-13 12:12:42.394208] INFO: Histogram: Percent of  5-mers: 33.4% (203129)
+[2020-05-13 12:12:42.401188] INFO: Histogram: Number of base-pairs: 2432463
+[2020-05-13 12:12:42.402186] INFO: Benchmark:  wall=0.146m cpu=0.146m

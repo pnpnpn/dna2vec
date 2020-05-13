@@ -1,6 +1,6 @@
 import random
 import string
-import resource
+# import resource
 import logbook
 import arrow
 import numpy as np
@@ -26,7 +26,8 @@ def random_str(N):
     return ''.join(random.SystemRandom().choice(string.ascii_lowercase + string.ascii_uppercase + string.digits) for _ in range(N))
 
 def memory_usage():
-    return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1E6
+    # return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1E6
+    return 0
 
 def estimate_bytes(filenames):
     return sum([os.stat(f).st_size for f in filenames])

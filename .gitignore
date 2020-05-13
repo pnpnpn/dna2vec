@@ -90,3 +90,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+test.py
+
+data/

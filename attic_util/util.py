@@ -1,10 +1,17 @@
 import random
 import string
-# import resource
 import logbook
 import arrow
 import numpy as np
 import os
+
+importedResource = False
+
+try:
+    import resource
+    importedResource = True
+except ImportError:
+    pass
 
 def split_Xy(df, y_colname='label'):
     X = df.drop([y_colname], axis=1)
@@ -26,8 +33,10 @@ def random_str(N):
     return ''.join(random.SystemRandom().choice(string.ascii_lowercase + string.ascii_uppercase + string.digits) for _ in range(N))
 
 def memory_usage():
-    # return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1E6
-    return 0
+    if(importedResource):
+        return resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1E6
+    else:
+        return 0
 
 def estimate_bytes(filenames):
     return sum([os.stat(f).st_size for f in filenames])

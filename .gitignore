@@ -1,5 +1,6 @@
 inputs/hg38/
 results/
+tmp/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -90,3 +91,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+test.py
+
+data/

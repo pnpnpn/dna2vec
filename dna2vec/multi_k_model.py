@@ -4,8 +4,10 @@ import logbook
 import tempfile
 import numpy as np
 
-from gensim.models import word2vec
+# from gensim.models import word2vec
 from gensim import matutils
+
+import gensim
 
 class SingleKModel:
     def __init__(self, model):
@@ -14,7 +16,7 @@ class SingleKModel:
 
 class MultiKModel:
     def __init__(self, filepath):
-        self.aggregate = word2vec.Word2Vec.load_word2vec_format(filepath, binary=False)
+        self.aggregate = gensim.models.KeyedVectors.load_word2vec_format(filepath, binary=False)
         self.logger = logbook.Logger(self.__class__.__name__)
 
         vocab_lens = [len(vocab) for vocab in self.aggregate.vocab.keys()]
@@ -25,6 +27,7 @@ class MultiKModel:
         self.data = {}
         for k in range(self.k_low, self.k_high + 1):
             self.data[k] = self.separate_out_model(k)
+        print(len(self.data))
 
     def model(self, k_len):
         """
@@ -50,10 +53,11 @@ class MultiKModel:
             self.logger.warn('Missing {}-mers: {} / {}'.format(k_len, len(vocabs), 4 ** k_len))
 
         header_str = '{} {}'.format(len(vocabs), self.vec_dim)
-        with tempfile.NamedTemporaryFile(mode='w') as fptr:
+        with tempfile.NamedTemporaryFile(mode='w', delete=False) as fptr:
             print(header_str, file=fptr)
             for vocab in vocabs:
                 vec_str = ' '.join("%f" % val for val in self.aggregate[vocab])
                 print('{} {}'.format(vocab, vec_str), file=fptr)
             fptr.flush()
-            return SingleKModel(word2vec.Word2Vec.load_word2vec_format(fptr.name, binary=False))
+            open(fptr.name, "rb")
+            return SingleKModel(gensim.models.KeyedVectors.load_word2vec_format(fptr.name, binary=False))

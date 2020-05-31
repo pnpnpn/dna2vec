@@ -132,7 +132,7 @@ def main():
             args.kmer_fragmenter))
 
     out_txt_filename = '{}.txt'.format(out_fileroot)
-    with open(out_txt_filename, 'w') as summary_fptr:
+    with open(out_txt_filename, 'w+') as summary_fptr:
         with Tee(summary_fptr):
             logbook.StreamHandler(sys.stdout, level=log_level).push_application()
             redirect_logging()

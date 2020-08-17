@@ -32,9 +32,8 @@ def estimate_bytes(filenames):
     return sum([os.stat(f).st_size for f in filenames])
 
 def get_output_fileroot(dirpath, name, postfix):
-    return '{}/{}-{}-{}-{}'.format(
-        dirpath,
-        name,
+    return '{}-{}-{}-{}'.format(
+        os.path.join(dirpath, name),
         arrow.utcnow().format('YYYYMMDD-HHmm'),
         postfix,
         random_str(3))

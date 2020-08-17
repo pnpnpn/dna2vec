@@ -39,7 +39,8 @@ class Learner:
                  context_halfsize,
                  gensim_iters,
                  vec_dim,
-                 epoch_saver):
+                 epoch_saver
+                 ):
         self.logger = logbook.Logger(self.__class__.__name__)
         assert(word2vec.FAST_VERSION >= 0)
         self.logger.info('word2vec.FAST_VERSION (should be >= 0): {}'.format(word2vec.FAST_VERSION))
@@ -100,10 +101,14 @@ def run_main(args, inputs, out_fileroot):
         histogram,
     )
     # This is the callback object that will save the model after each epoch (in theory).
-    saver = EpochSaver(out_fileroot)
+    epoch_saver = EpochSaver(out_fileroot)
     # This is the model.
-    learner = Learner(out_fileroot, args.context, args.gensim_iters, args.vec_dim)
-    learner.train(kmer_seq_iterable, saver)
+    learner = Learner(out_fileroot,
+                      args.context,
+                      args.gensim_iters,
+                      args.vec_dim,
+                      epoch_saver)
+    learner.train(kmer_seq_iterable)
     learner.write_vec()
 
     histogram.print_stat(sys.stdout)

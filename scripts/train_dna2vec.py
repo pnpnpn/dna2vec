@@ -103,7 +103,7 @@ def run_main(args, inputs, out_fileroot):
     saver = EpochSaver(out_fileroot)
     # This is the model.
     learner = Learner(out_fileroot, args.context, args.gensim_iters, args.vec_dim)
-    learner.train(kmer_seq_iterable)
+    learner.train(kmer_seq_iterable, saver)
     learner.write_vec()
 
     histogram.print_stat(sys.stdout)

@@ -37,8 +37,9 @@ class EpochSaver(CallbackAny2Vec):
 class Learner:
     def __init__(self, out_fileroot,
                  context_halfsize,
-                 gensim_iters,
+                 epochs,
                  vec_dim,
+                 workers,
                  epoch_saver
                  ):
         self.logger = logbook.Logger(self.__class__.__name__)
@@ -47,15 +48,17 @@ class Learner:
         self.model = None
         self.out_fileroot = out_fileroot
         self.context_halfsize = context_halfsize
-        self.gensim_iters = gensim_iters
+        self.epochs = epochs
         self.use_skipgram = 1
         self.vec_dim = vec_dim
         self.epoch_saver = epoch_saver
+        self.workers = workers
 
         self.logger.info('Context window half size: {}'.format(self.context_halfsize))
         self.logger.info('Use skipgram: {}'.format(self.use_skipgram))
-        self.logger.info('gensim_iters: {}'.format(self.gensim_iters))
+        self.logger.info('epochs: {}'.format(self.epochs))
         self.logger.info('vec_dim: {}'.format(self.vec_dim))
+        self.logger.info('workers: {}'.format(self.workers))
 
     def train(self, kmer_seq_generator):
         self.model = word2vec.Word2Vec(
@@ -63,9 +66,9 @@ class Learner:
             size=self.vec_dim,
             window=self.context_halfsize,
             min_count=5,
-            workers=4,
+            workers=self.workers,
             sg=self.use_skipgram,
-            iter=self.gensim_iters,
+            iter=self.epochs,
             callbacks=[self.epoch_saver])
 
     def write_vec(self):
@@ -105,8 +108,9 @@ def run_main(args, inputs, out_fileroot):
     # This is the model.
     learner = Learner(out_fileroot,
                       args.context,
-                      args.gensim_iters,
+                      args.epochs,
                       args.vec_dim,
+                      args.workers,
                       epoch_saver)
     learner.train(kmer_seq_iterable)
     learner.write_vec()
@@ -127,7 +131,7 @@ def main():
     argp.add_argument('--k-high', help='k-mer end range (inclusive)', type=int, default=5)
     argp.add_argument('--context', help='half size of context window (the total size is 2*c+1)', type=int, default=4)
     argp.add_argument('--epochs', help='number of epochs', type=int, default=1)
-    argp.add_argument('--gensim-iters', help="gensim's internal iterations", type=int, default=1)
+    argp.add_argument('--workers', help='number of workers', type=int, default=4)
     argp.add_argument('--out-dir', help="output directory", default='.')
     argp.add_argument('--debug', help='', action='store_true')
     args = argp.parse_args()

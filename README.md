@@ -1,5 +1,7 @@
 # dna2vec
 
+## This is a modified version of this for specific use withing Trace-Genomics.
+
 [![Build Status](https://travis-ci.org/pnpnpn/dna2vec.svg?branch=master)](https://travis-ci.org/pnpnpn/dna2vec)
 
 **Dna2vec** is an open-source library to train distributed representations

@@ -17,26 +17,48 @@ from dna2vec.generators import SeqGenerator, KmerSeqIterable, SeqMapper, SeqFrag
 from dna2vec.generators import DisjointKmerFragmenter, SlidingKmerFragmenter
 
 from gensim.models import word2vec
+from gensim.models.callbacks import CallbackAny2Vec
 
-class InvalidArgException(Exception):
-    pass
+
+class EpochSaver(CallbackAny2Vec):
+    '''Callback to save model after each epoch.
+       Example taken from here: https://radimrehurek.com/gensim/models/callbacks.html#gensim.models.callbacks.CallbackAny2Vec
+       '''
+    ...
+    def __init__(self, path_prefix):
+        self.path_prefix = path_prefix
+        self.epoch = 0
+
+    def on_epoch_end(self, model):
+        output_path = '{}_epoch{}.w2v'.format(self.path_prefix, self.epoch)
+        model.wv.save_word2vec_format(output_path, binary=False)
+        self.epoch += 1
 
 class Learner:
-    def __init__(self, out_fileroot, context_halfsize, gensim_iters, vec_dim):
+    def __init__(self, out_fileroot,
+                 context_halfsize,
+                 epochs,
+                 vec_dim,
+                 workers,
+                 epoch_saver
+                 ):
         self.logger = logbook.Logger(self.__class__.__name__)
         assert(word2vec.FAST_VERSION >= 0)
         self.logger.info('word2vec.FAST_VERSION (should be >= 0): {}'.format(word2vec.FAST_VERSION))
         self.model = None
         self.out_fileroot = out_fileroot
         self.context_halfsize = context_halfsize
-        self.gensim_iters = gensim_iters
+        self.epochs = epochs
         self.use_skipgram = 1
         self.vec_dim = vec_dim
+        self.epoch_saver = epoch_saver
+        self.workers = workers
 
         self.logger.info('Context window half size: {}'.format(self.context_halfsize))
         self.logger.info('Use skipgram: {}'.format(self.use_skipgram))
-        self.logger.info('gensim_iters: {}'.format(self.gensim_iters))
+        self.logger.info('epochs: {}'.format(self.epochs))
         self.logger.info('vec_dim: {}'.format(self.vec_dim))
+        self.logger.info('workers: {}'.format(self.workers))
 
     def train(self, kmer_seq_generator):
         self.model = word2vec.Word2Vec(
@@ -44,11 +66,10 @@ class Learner:
             size=self.vec_dim,
             window=self.context_halfsize,
             min_count=5,
-            workers=4,
+            workers=self.workers,
             sg=self.use_skipgram,
-            iter=self.gensim_iters)
-
-        # self.logger.info(model.vocab)
+            iter=self.epochs,
+            callbacks=[self.epoch_saver])
 
     def write_vec(self):
         out_filename = '{}.w2v'.format(self.out_fileroot)
@@ -69,7 +90,7 @@ def run_main(args, inputs, out_fileroot):
     elif args.kmer_fragmenter == 'sliding':
         kmer_fragmenter = SlidingKmerFragmenter(args.k_low, args.k_high)
     else:
-        raise InvalidArgException('Invalid kmer fragmenter: {}'.format(args.kmer_fragmenter))
+        raise ValueError('Invalid kmer fragmenter: {}'.format(args.kmer_fragmenter))
 
     logbook.info('kmer fragmenter: {}'.format(args.kmer_fragmenter))
 
@@ -82,8 +103,15 @@ def run_main(args, inputs, out_fileroot):
         kmer_fragmenter,
         histogram,
     )
-
-    learner = Learner(out_fileroot, args.context, args.gensim_iters, args.vec_dim)
+    # This is the callback object that will save the model after each epoch (in theory).
+    epoch_saver = EpochSaver(out_fileroot)
+    # This is the model.
+    learner = Learner(out_fileroot,
+                      args.context,
+                      args.epochs,
+                      args.vec_dim,
+                      args.workers,
+                      epoch_saver)
     learner.train(kmer_seq_iterable)
     learner.write_vec()
 
@@ -103,8 +131,8 @@ def main():
     argp.add_argument('--k-high', help='k-mer end range (inclusive)', type=int, default=5)
     argp.add_argument('--context', help='half size of context window (the total size is 2*c+1)', type=int, default=4)
     argp.add_argument('--epochs', help='number of epochs', type=int, default=1)
-    argp.add_argument('--gensim-iters', help="gensim's internal iterations", type=int, default=1)
-    argp.add_argument('--out-dir', help="output directory", default='../dataset/dna2vec/results')
+    argp.add_argument('--workers', help='number of workers', type=int, default=4)
+    argp.add_argument('--out-dir', help="output directory", default='.')
     argp.add_argument('--debug', help='', action='store_true')
     args = argp.parse_args()
 
@@ -132,11 +160,12 @@ def main():
             args.kmer_fragmenter))
 
     out_txt_filename = '{}.txt'.format(out_fileroot)
-    with open(out_txt_filename, 'w') as summary_fptr:
-        with Tee(summary_fptr):
-            logbook.StreamHandler(sys.stdout, level=log_level).push_application()
-            redirect_logging()
-            run_main(args, inputs, out_fileroot)
+    print(out_txt_filename)
+    # with open(out_txt_filename, 'w') as summary_fptr:
+    # with Tee(summary_fptr):
+    logbook.TimedRotatingFileHandler(out_txt_filename, level=log_level).push_application()
+    redirect_logging()
+    run_main(args, inputs, out_fileroot)
 
 if __name__ == '__main__':
     main()

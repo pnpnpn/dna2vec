@@ -1,0 +1,7 @@
+inputs: ../ncbi_ground_reads_subset/*.fa
+k-low: 3
+k-high: 8
+vec-dim: 100
+epoch: 10
+context: 10
+out-dir: results/

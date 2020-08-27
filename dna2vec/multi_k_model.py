@@ -4,7 +4,7 @@ import logbook
 import tempfile
 import numpy as np
 
-from gensim.models import word2vec
+from gensim.models import word2vec, KeyedVectors
 from gensim import matutils
 
 class SingleKModel:
@@ -14,7 +14,7 @@ class SingleKModel:
 
 class MultiKModel:
     def __init__(self, filepath):
-        self.aggregate = word2vec.Word2Vec.load_word2vec_format(filepath, binary=False)
+        self.aggregate = KeyedVectors.load_word2vec_format(filepath, binary=False)
         self.logger = logbook.Logger(self.__class__.__name__)
 
         vocab_lens = [len(vocab) for vocab in self.aggregate.vocab.keys()]
@@ -34,6 +34,10 @@ class MultiKModel:
 
     def vector(self, vocab):
         return self.data[len(vocab)].model[vocab]
+
+    def most_similar(self, vocab, topn=10):
+        # Note this only works for returning k-mers of the same length.
+        return self.data[len(vocab)].model.most_similar(vocab, topn=topn)
 
     def unitvec(self, vec):
         return matutils.unitvec(vec)
@@ -56,4 +60,4 @@ class MultiKModel:
                 vec_str = ' '.join("%f" % val for val in self.aggregate[vocab])
                 print('{} {}'.format(vocab, vec_str), file=fptr)
             fptr.flush()
-            return SingleKModel(word2vec.Word2Vec.load_word2vec_format(fptr.name, binary=False))
+            return SingleKModel(KeyedVectors.load_word2vec_format(fptr.name, binary=False))

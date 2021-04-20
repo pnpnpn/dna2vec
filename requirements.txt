@@ -8,7 +8,7 @@ Logbook==1.0.0
 numpy==1.16
 pep8==1.7.0
 pluggy==0.4.0
-py==1.4.33
+py==1.10.0
 pytest==3.0.7
 python-dateutil==2.6.0
 requests==2.20.0

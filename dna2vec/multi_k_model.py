@@ -4,20 +4,20 @@ import logbook
 import tempfile
 import numpy as np
 
-from gensim.models import word2vec
+from gensim.models import KeyedVectors
 from gensim import matutils
 
 class SingleKModel:
     def __init__(self, model):
         self.model = model
-        self.vocab_lst = sorted(model.vocab.keys())
+        self.vocab_lst = sorted(model.index_to_key)
 
 class MultiKModel:
     def __init__(self, filepath):
-        self.aggregate = word2vec.Word2Vec.load_word2vec_format(filepath, binary=False)
+        self.aggregate = KeyedVectors.load_word2vec_format(filepath, binary=False)
         self.logger = logbook.Logger(self.__class__.__name__)
 
-        vocab_lens = [len(vocab) for vocab in self.aggregate.vocab.keys()]
+        vocab_lens = [len(vocab) for vocab in self.aggregate.index_to_key]
         self.k_low = min(vocab_lens)
         self.k_high = max(vocab_lens)
         self.vec_dim = self.aggregate.vector_size
@@ -45,7 +45,7 @@ class MultiKModel:
         return np.linalg.norm(self.vector(vocab))
 
     def separate_out_model(self, k_len):
-        vocabs = [vocab for vocab in self.aggregate.vocab.keys() if len(vocab) == k_len]
+        vocabs = [vocab for vocab in self.aggregate.index_to_key if len(vocab) == k_len]
         if len(vocabs) != 4 ** k_len:
             self.logger.warn('Missing {}-mers: {} / {}'.format(k_len, len(vocabs), 4 ** k_len))
 
@@ -56,4 +56,4 @@ class MultiKModel:
                 vec_str = ' '.join("%f" % val for val in self.aggregate[vocab])
                 print('{} {}'.format(vocab, vec_str), file=fptr)
             fptr.flush()
-            return SingleKModel(word2vec.Word2Vec.load_word2vec_format(fptr.name, binary=False))
+            return SingleKModel(KeyedVectors.load_word2vec_format(fptr.name, binary=False))

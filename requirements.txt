@@ -3,7 +3,7 @@ biopython==1.68
 boto==2.46.1
 bz2file==0.98
 ConfigArgParse==0.11.0
-gensim==0.13.2
+gensim==4.1.2
 Logbook==1.0.0
 numpy==1.16
 pep8==1.7.0
@@ -11,8 +11,8 @@ pluggy==0.4.0
 py==1.4.33
 pytest==3.0.7
 python-dateutil==2.6.0
-requests==2.20.0
-scipy==0.19.0
+requests==2.20
+scipy==1.71
 six==1.10.0
 smart-open==1.5.1
 tox==2.7.0

@@ -41,12 +41,12 @@ class Learner:
     def train(self, kmer_seq_generator):
         self.model = word2vec.Word2Vec(
             sentences=kmer_seq_generator,
-            size=self.vec_dim,
+            vector_size=self.vec_dim,
             window=self.context_halfsize,
             min_count=5,
             workers=4,
             sg=self.use_skipgram,
-            iter=self.gensim_iters)
+            epochs=self.gensim_iters)
 
         # self.logger.info(model.vocab)
 
